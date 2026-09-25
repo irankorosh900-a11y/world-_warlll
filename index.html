@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>جنگ جهانی سوم | فصل ۶</title>
 <meta name="description" content="جنگ جهانی سوم - فصل ۶. انتخاب کشور، رقابت جهانی و جایزه ۴ میلیون برای قهرمان فصل.">
+
 <style>
 :root{
   --bg:#070b10; --panel:#0e151d; --panel2:#121c26; --line:#22303d;
@@ -25,7 +26,8 @@ h1{font-size:34px;margin:12px 0 8px}
 .subtitle{color:var(--muted);font-size:14px}
 .badge{
   display:inline-block;margin-top:18px;padding:8px 15px;border-radius:999px;
-  background:rgba(242,189,69,.12);border:1px solid rgba(242,189,69,.3);color:#ffd66b;font-weight:bold
+  background:rgba(242,189,69,.12);border:1px solid rgba(242,189,69,.3);
+  color:#ffd66b;font-weight:bold
 }
 .hero{
   background:linear-gradient(145deg,rgba(18,29,40,.96),rgba(9,15,21,.96));
@@ -39,65 +41,158 @@ h1{font-size:34px;margin:12px 0 8px}
   padding:16px;border-radius:14px;font-weight:bold;font-size:17px;
   box-shadow:0 9px 25px rgba(22,135,248,.25)
 }
-.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.quick{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-top:18px
+}
 .quick a,.quick div{
-  text-decoration:none;color:#dce5ec;background:var(--panel2);border:1px solid var(--line);
-  border-radius:14px;padding:14px 8px;text-align:center;font-size:13px
+  text-decoration:none;color:#dce5ec;background:var(--panel2);
+  border:1px solid var(--line);border-radius:14px;padding:14px 8px;
+  text-align:center;font-size:13px
 }
 .quick strong{display:block;color:#fff;font-size:16px;margin-bottom:5px}
+
 section{margin:24px 0}
-.section-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.section-title{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:10px;margin-bottom:12px
+}
 .section-title h2{font-size:20px;margin:0}
 .section-title span{color:var(--muted);font-size:12px}
+
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .info{
-  background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center
+  background:var(--panel);border:1px solid var(--line);
+  border-radius:16px;padding:18px;text-align:center
 }
-.info .icon{font-size:28px}.info b{display:block;margin:8px 0 4px}.info small{color:var(--muted)}
+.info .icon{font-size:28px}
+.info b{display:block;margin:8px 0 4px}
+.info small{color:var(--muted)}
 .prize{color:#ffd15a;font-size:24px!important}
+
 .notice{
-  padding:15px 17px;background:rgba(22,135,248,.08);border:1px solid rgba(22,135,248,.22);
+  padding:15px 17px;background:rgba(22,135,248,.08);
+  border:1px solid rgba(22,135,248,.22);
   border-radius:15px;color:#cbd8e2;line-height:1.9;font-size:13px
 }
+
 .country-wrap{
-  background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:15px
+  background:var(--panel);border:1px solid var(--line);
+  border-radius:20px;padding:15px
 }
 .search{
-  width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--line);
-  background:#091018;color:#fff;outline:none;font-size:14px;margin-bottom:12px
+  width:100%;padding:14px 16px;border-radius:12px;
+  border:1px solid var(--line);background:#091018;
+  color:#fff;outline:none;font-size:14px;margin-bottom:12px
 }
 .search:focus{border-color:#1687f8}
+
 details{
-  background:#0b1219;border:1px solid var(--line);border-radius:13px;margin:9px 0;overflow:hidden
+  background:#0b1219;border:1px solid var(--line);
+  border-radius:13px;margin:9px 0;overflow:hidden
 }
 summary{
-  cursor:pointer;list-style:none;padding:15px;font-weight:bold;display:flex;
-  justify-content:space-between;align-items:center
+  cursor:pointer;list-style:none;padding:15px;font-weight:bold;
+  display:flex;justify-content:space-between;align-items:center
 }
 summary::-webkit-details-marker{display:none}
 summary span{color:var(--muted);font-size:12px;font-weight:normal}
-.list{padding:0 15px 14px;display:grid;grid-template-columns:repeat(2,1fr);gap:7px}
+
+.list{
+  padding:0 15px 14px;
+  display:grid;grid-template-columns:repeat(2,1fr);gap:7px
+}
 .country{
-  padding:10px 11px;border-radius:9px;background:#101923;color:#dce5ec;font-size:13px
+  padding:10px 11px;border-radius:9px;
+  background:#101923;color:#dce5ec;font-size:13px
 }
 .star{color:#ffd15a}
 .special .country{border-right:2px solid #7f8790}
-.footer{text-align:center;padding:20px 10px 35px;color:#657482;font-size:11px}
-.sharebtn,.copybtn{
-  border:0;cursor:pointer;font-family:inherit;font-weight:bold;color:#fff;
-  border-radius:12px;padding:13px 18px;font-size:14px;
+
+/* قوانین */
+.rules-wrap{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:15px
 }
-.sharebtn{display:block;width:100%;margin-top:11px;background:#172432;border:1px solid #2a4052}
+.rule-box{
+  background:#0b1219;
+  border:1px solid var(--line);
+  border-radius:14px;
+  margin:10px 0;
+  overflow:hidden
+}
+.rule-box summary{
+  padding:16px;
+  font-size:15px
+}
+.rule-content{
+  padding:4px 18px 18px;
+  color:#d5dee6;
+  line-height:2;
+  font-size:13px
+}
+.rule-content ol{
+  margin:8px 0 0;
+  padding-right:20px
+}
+.rule-content li{
+  margin:7px 0
+}
+.rule-note{
+  background:rgba(242,189,69,.08);
+  border:1px solid rgba(242,189,69,.25);
+  border-radius:14px;
+  padding:17px;
+  color:#ffe29a;
+  line-height:2;
+  font-size:13px;
+  margin-top:12px
+}
+.rule-danger{
+  background:rgba(220,50,50,.08);
+  border:1px solid rgba(220,50,50,.25);
+  border-radius:14px;
+  padding:17px;
+  color:#ffb3b3;
+  line-height:2;
+  font-size:13px;
+  margin-top:12px;
+  font-weight:bold
+}
+
+.footer{
+  text-align:center;padding:20px 10px 35px;
+  color:#657482;font-size:11px
+}
+.sharebtn,.copybtn{
+  border:0;cursor:pointer;font-family:inherit;
+  font-weight:bold;color:#fff;border-radius:12px;
+  padding:13px 18px;font-size:14px
+}
+.sharebtn{
+  display:block;width:100%;margin-top:11px;
+  background:#172432;border:1px solid #2a4052
+}
 .copybtn{margin-top:12px;background:#1687f8}
 #copymsg{display:block;color:#8fc7ff;font-size:12px;margin-top:8px}
+
+@media(max-width:750px){
+  .quick{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:650px){
   .quick,.cards{grid-template-columns:1fr}
-  h1{font-size:28px}.logo{font-size:46px}
+  h1{font-size:28px}
+  .logo{font-size:46px}
   .list{grid-template-columns:1fr}
   .hero{padding:21px 16px}
 }
 </style>
 </head>
+
 <body>
 <div class="container">
 
@@ -109,131 +204,528 @@ summary span{color:var(--muted);font-size:12px;font-weight:normal}
 </header>
 
 <main>
+
+  <!-- بخش ورود -->
   <div class="hero">
     <h2>کشورت را انتخاب کن و وارد رقابت شو!</h2>
+
     <p>
       در فصل ششم جنگ جهانی سوم، کشور خودت را انتخاب کن، اقتصاد و دارایی‌هایت را مدیریت کن،
       با دیگر بازیکنان رقابت کن و برای رسیدن به قهرمانی تلاش کن.
     </p>
-    <a class="mainbtn" href="https://rubika.ir/woorld_warIII">🎮 ورود به بازی در روبیکا</a>
+
+    <a class="mainbtn" href="https://rubika.ir/woorld_warIII">
+      🎮 ورود به بازی در روبیکا
+    </a>
 
     <div class="quick">
-      <a href="https://rubika.ir/eliyas_1188"><strong>📋 کشورگیری</strong>پشتیبانی</a>
-      <a href="https://rubika.ir/shopwaarr"><strong>🛒 شاپ</strong>خرید و تجهیزات</a>
-      <a href="https://rubika.ir/daraei__world"><strong>💰 دارایی</strong>اطلاعات کشورها</a>
+      <a href="https://rubika.ir/eliyas_1188">
+        <strong>📋 کشورگیری</strong>پشتیبانی
+      </a>
+
+      <a href="https://rubika.ir/shopwaarr">
+        <strong>🛒 شاپ</strong>خرید و تجهیزات
+      </a>
+
+      <a href="https://rubika.ir/daraei__world">
+        <strong>💰 دارایی</strong>اطلاعات کشورها
+      </a>
+
+      <a href="#rules">
+        <strong>📜 قوانین بازی</strong>قوانین رسمی
+      </a>
     </div>
-    <button class="sharebtn" onclick="shareGame()">📤 دعوت دوستان به بازی</button>
+
+    <button class="sharebtn" onclick="shareGame()">
+      📤 دعوت دوستان به بازی
+    </button>
   </div>
 
+  <!-- اطلاعات فصل -->
   <section>
-    <div class="section-title"><h2>🏆 اطلاعات فصل</h2><span>Season 06</span></div>
+    <div class="section-title">
+      <h2>🏆 اطلاعات فصل</h2>
+      <span>Season 06</span>
+    </div>
+
     <div class="cards">
-      <div class="info"><div class="icon">🏆</div><b>جایزه فصل</b><small class="prize">۴ میلیون</small></div>
-      <div class="info"><div class="icon">🔥</div><b>فصل فعلی</b><small>فصل ۶</small></div>
-      <div class="info"><div class="icon">📤</div><b>دعوت از دوستان</b><small>دوستانت را به بازی دعوت کن</small></div>
+      <div class="info">
+        <div class="icon">🏆</div>
+        <b>جایزه فصل</b>
+        <small class="prize">۴ میلیون</small>
+      </div>
+
+      <div class="info">
+        <div class="icon">🔥</div>
+        <b>فصل فعلی</b>
+        <small>فصل ۶</small>
+      </div>
+
+      <div class="info">
+        <div class="icon">📤</div>
+        <b>دعوت از دوستان</b>
+        <small>دوستانت را به بازی دعوت کن</small>
+      </div>
     </div>
   </section>
 
+  <!-- دعوت -->
   <section>
-    <div class="section-title"><h2>📢 دعوت به بازی</h2><span>اشتراک‌گذاری سریع</span></div>
+    <div class="section-title">
+      <h2>📢 دعوت به بازی</h2>
+      <span>اشتراک‌گذاری سریع</span>
+    </div>
+
     <div class="notice">
       لینک همین صفحه را برای دوستانت بفرست تا مستقیم وارد صفحه بازی شوند و از آنجا به روبیکا منتقل شوند.
-      <button class="copybtn" onclick="copyInvite()">🔗 کپی لینک دعوت</button>
+
+      <button class="copybtn" onclick="copyInvite()">
+        🔗 کپی لینک دعوت
+      </button>
+
       <span id="copymsg"></span>
     </div>
   </section>
 
+  <!-- قهرمانان -->
   <section>
-    <div class="section-title"><h2>🏆 قهرمانان فصل‌های گذشته</h2><span>افتخارات بازی</span></div>
+    <div class="section-title">
+      <h2>🏆 قهرمانان فصل‌های گذشته</h2>
+      <span>افتخارات بازی</span>
+    </div>
+
     <div class="cards">
-      <div class="info"><div class="icon">🥇</div><b>فصل قبل</b><small>🇺🇸 آمریکا — مقام اول</small></div>
-      <div class="info"><div class="icon">🏆</div><b>فصل ۴</b><small>🇮🇷 ایران — مقام اول</small></div>
+      <div class="info">
+        <div class="icon">🥇</div>
+        <b>فصل قبل</b>
+        <small>🇺🇸 آمریکا — مقام اول</small>
+      </div>
+
+      <div class="info">
+        <div class="icon">🏆</div>
+        <b>فصل ۴</b>
+        <small>🇮🇷 ایران — مقام اول</small>
+      </div>
     </div>
   </section>
 
-  <section id="countries">
+  <!-- ==================== قوانین بازی ==================== -->
+  <section id="rules">
+
     <div class="section-title">
-      <h2>🌎 لیست کشورهای قابل انتخاب</h2><span>جست‌وجوی سریع</span>
+      <h2>📜 قوانین رسمی بازی</h2>
+      <span>قوانین فصل ۶</span>
     </div>
+
+    <div class="rules-wrap">
+
+      <!-- قوانین دوئل -->
+      <details class="rule-box" open>
+        <summary>⚔️ قوانین دوئل <span>۸ قانون</span></summary>
+
+        <div class="rule-content">
+          <ol>
+            <li>در دوئل، کشور برنده تمام تجهیزات کشور مقابل را تصاحب می‌کند.</li>
+
+            <li>
+              در دوئل و جنگ، کشوری که بیشترین مقدار ❤️ جون حریف را کاهش دهد،
+              برنده خواهد بود.
+            </li>
+
+            <li>
+              پس از شروع دوئل، ۳٪ از رضایت مردمی کشور آغازکننده جنگ کسر می‌شود.
+            </li>
+
+            <li>
+              فرصت دفاع در دوئل ۱۰ دقیقه است. اگر کشور در زمان تعیین‌شده دفاع نکند،
+              از ❤️ جون آن کشور کسر خواهد شد.
+            </li>
+
+            <li>
+              از موشک‌های کوتاه‌برد نمی‌توان برای مسافت‌های دور استفاده کرد.
+            </li>
+
+            <li>
+              اگر گروهکی در کشوری مستقر شود و در جریان جنگ نابود شود،
+              هزینه خسارت آن بر عهده کشوری است که گروهک در آن مستقر بوده است.
+            </li>
+
+            <li>
+              دوئل تک‌هسته‌ای است؛ یعنی هر کشور در هر دوئل فقط می‌تواند
+              <strong>یک کارت جنگی</strong> ارسال کند.
+            </li>
+
+            <li>
+              هر کشور فقط هر سه روز یک‌بار می‌تواند وارد جنگ شود.
+            </li>
+          </ol>
+        </div>
+      </details>
+
+      <!-- قوانین بیانیه -->
+      <details class="rule-box">
+        <summary>💌 قوانین بیانیه <span>۵ قانون</span></summary>
+
+        <div class="rule-content">
+          <ol>
+            <li>
+              تمام بیانیه‌ها باید دارای کارت رسمی و پرچم کشور باشند.
+            </li>
+
+            <li>
+              توهین به بازیکنان ممنوع است. ⛔
+            </li>
+
+            <li>
+              نوشتن آیدی خود یا آیدی بازیکن دیگر در بیانیه ممنوع است. ⛔
+            </li>
+
+            <li>
+              اگر کشوری به مدت ۴ روز بیانیه منتشر نکند،
+              حذف خواهد شد و تجهیزات آن نیز از بین خواهد رفت.
+            </li>
+
+            <li>
+              ساخت پرچم با استفاده از AI آزاد است؛ اما پرچم کشور مربوطه
+              باید در تصویر به‌وضوح مشخص باشد.
+            </li>
+          </ol>
+        </div>
+      </details>
+
+      <!-- قوانین تحریم -->
+      <details class="rule-box">
+        <summary>🚫 قوانین تحریم <span>۸ قانون</span></summary>
+
+        <div class="rule-content">
+          <ol>
+            <li>
+              کشورهای VIP امکان تحریم کردن دارند و برای اعمال تحریم
+              نیازی به جلب رضایت مردمی ندارند.
+            </li>
+
+            <li>
+              برای اعمال تحریم، رضایت مردمی کشور باید حداقل ۳۰٪ باشد.
+            </li>
+
+            <li>
+              رضایت مردمی را می‌توان با خرید مواردی مانند
+              کارخانه پوشاک و نفتکش افزایش داد.
+            </li>
+
+            <li>
+              برای تصرف آسمان یک قاره، کشور متقاضی باید خودش در آن قاره حضور داشته باشد.
+            </li>
+
+            <li>
+              کشورها نمی‌توانند آسمان قاره دیگری را مستقیماً فتح کنند؛
+              اما با ساخت پایگاه هوایی در آن قاره می‌توانند در آن منطقه دفاع کنند.
+            </li>
+
+            <li>
+              تحریم باعث کاهش رضایت مردمی کشور مقابل می‌شود.
+            </li>
+
+            <li>
+              بستن آسمان قاره، تنگه، دریا، اقیانوس و موارد مشابه،
+              هرکدام روزانه ۱٪ از رضایت مردمی کشور هدف کم می‌کند.
+            </li>
+
+            <li>
+              هر کشور حداکثر می‌تواند ۳ نوع تحریم اعمال کند.
+            </li>
+          </ol>
+        </div>
+      </details>
+
+      <!-- جنگ اجباری -->
+      <details class="rule-box">
+        <summary>🔥 قوانین جنگ اجباری <span>۸ قانون</span></summary>
+
+        <div class="rule-content">
+          <ol>
+            <li>
+              در جنگ اجباری، کشورها به‌صورت تصادفی و دو‌به‌دو مقابل یکدیگر
+              قرار می‌گیرند و موظف به شرکت در جنگ هستند.
+            </li>
+
+            <li>
+              از هر مرحله، یک کشور به‌عنوان پیروز خارج می‌شود.
+            </li>
+
+            <li>
+              پس از نابودی حریف، تجهیزات کشور مقابل به کشور پیروز منتقل نمی‌شود.
+            </li>
+
+            <li>
+              تجهیزاتی که برای نابودی حریف استفاده شده‌اند،
+              به کشور استفاده‌کننده بازگردانده نمی‌شوند و حذف خواهند شد.
+            </li>
+
+            <li>
+              فرصت دفاع در جنگ اجباری ۱۵ دقیقه است.
+            </li>
+
+            <li>
+              در جنگ اجباری تساوی وجود ندارد.
+            </li>
+
+            <li>
+              جنگ اجباری دو‌هسته‌ای است؛ یعنی هر کشور در هر جنگ می‌تواند
+              <strong>دو کارت جنگی</strong> ارسال کند.
+            </li>
+
+            <li>
+              برنده، کشوری است که ارزش مالی تجهیزات استفاده‌شده بیشتری داشته باشد.
+            </li>
+          </ol>
+        </div>
+      </details>
+
+      <!-- قوانین اتحاد -->
+      <details class="rule-box">
+        <summary>🤝 قوانین اتحاد <span>۱۸ قانون</span></summary>
+
+        <div class="rule-content">
+
+          <h3>👥 تشکیل اتحاد</h3>
+          <ol>
+            <li>
+              هر اتحاد دارای ۱ لیدر و حداکثر ۴ عضو است؛
+              بنابراین هر اتحاد در مجموع حداکثر ۵ کشور خواهد داشت.
+            </li>
+
+            <li>
+              لیدر مسئول اعلام رسمی تصمیمات اتحاد و هماهنگی اعضا است.
+            </li>
+
+            <li>
+              اضافه یا حذف شدن اعضا باید توسط لیدر اتحاد اعلام شود.
+            </li>
+
+            <li>
+              هر کشور باید مشخص باشد که عضو کدام اتحاد است.
+            </li>
+          </ol>
+
+          <h3>⚔️ جنگ دوئل</h3>
+          <ol start="5">
+            <li>
+              در دوئل بین دو کشور، اتحادها حق کمک کردن ندارند.
+            </li>
+
+            <li>
+              دوئل فقط مخصوص دو کشور است و هیچ عضو دیگری نمی‌تواند
+              در آن تجهیزات یا کارت جنگی وارد کند.
+            </li>
+          </ol>
+
+          <h3>🏳️ جنگ اتحادی</h3>
+          <ol start="7">
+            <li>
+              شروع جنگ اتحادی فقط با توافق هر دو لیدر اتحاد امکان‌پذیر است.
+            </li>
+
+            <li>
+              پس از توافق لیدرها، جنگ به‌صورت رسمی اعلام می‌شود.
+            </li>
+
+            <li>
+              قبل از شروع جنگ، هر عضو باید تجهیزاتی را که قصد استفاده از آن‌ها
+              را دارد اعلام کند.
+            </li>
+
+            <li>
+              پس از شروع جنگ، اضافه کردن تجهیزات جدید به فهرست اعلام‌شده ممنوع است؛
+              مگر با توافق مدیریت بازی.
+            </li>
+
+            <li>
+              برنده جنگ اتحادی، اتحادی است که مجموعاً جون بیشتری از حریف کاهش دهد.
+            </li>
+
+            <li>
+              هر عضو فقط می‌تواند از تجهیزاتی استفاده کند که در زمان تعیین‌شده اعلام کرده است.
+            </li>
+          </ol>
+
+          <h3>📋 قوانین تکمیلی</h3>
+          <ol start="13">
+            <li>
+              هیچ عضوی بدون اجازه لیدر نمی‌تواند به نام اتحاد
+              جنگ اتحادی یا صلح رسمی اعلام کند.
+            </li>
+
+            <li>
+              در صورت خروج یک عضو از اتحاد در جریان جنگ،
+              ادامه حضور او طبق تصمیم مدیریت بازی خواهد بود.
+            </li>
+
+            <li>
+              استفاده از تجهیزات خارج از قوانین بازی یا اعلام‌نشده،
+              می‌تواند باعث باطل شدن حمله مربوطه شود.
+            </li>
+
+            <li>
+              اختلاف میان دو اتحاد ابتدا باید توسط لیدرها بررسی شود و
+              در صورت حل‌نشدن، فرماندهی بازی تصمیم نهایی را اعلام می‌کند.
+            </li>
+
+            <li>
+              تغییر لیدر یا انحلال اتحاد باید به‌صورت رسمی در کانال بازی اعلام شود.
+            </li>
+
+            <li>
+              تعداد اعضا و قوانین مربوط به اتحاد باید برای همه بازیکنان قابل مشاهده باشد.
+            </li>
+          </ol>
+
+        </div>
+      </details>
+
+      <div class="rule-note">
+        📌 <strong>نکته:</strong>
+        قوانین عمومی دوئل، بیانیه، تحریم و جنگ اجباری برای اعضای اتحاد نیز لازم‌الاجرا هستند؛
+        مگر اینکه برای یک جنگ اتحادی قانون خاصی تعیین شده باشد.
+      </div>
+
+      <div class="rule-danger">
+        ⚠️ هشدار مدیریت بازی:<br>
+        رعایت تمامی قوانین برای تمام بازیکنان الزامی است.
+        <br>
+        ⛔ <strong>عدم رعایت قوانین باعث حذف شما از بازی خواهد شد.</strong>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- لیست کشورها -->
+  <section id="countries">
+
+    <div class="section-title">
+      <h2>🌎 لیست کشورهای قابل انتخاب</h2>
+      <span>جست‌وجوی سریع</span>
+    </div>
+
     <div class="country-wrap">
-      <input class="search" id="search" type="search" placeholder="🔎 نام کشور را جست‌وجو کن..." oninput="filterCountries()">
+
+      <input
+        class="search"
+        id="search"
+        type="search"
+        placeholder="🔎 نام کشور را جست‌وجو کن..."
+        oninput="filterCountries()"
+      >
 
       <details open>
         <summary>🌏 آسیا <span>۲۳ گزینه</span></summary>
+
         <div class="list">
           <div class="country">🇮🇷 Iran | ایران <span class="star">🌟</span></div>
           <div class="country">🇨🇳 China | چین <span class="star">🌟</span></div>
-          <div class="country">🇯🇵 Japan | ژاپن</div><div class="country">🇰🇵 North Korea | کره شمالی</div>
-          <div class="country">🇰🇷 South Korea | کره جنوبی</div><div class="country">🇮🇳 India | هند</div>
-          <div class="country">🇷🇺 Russia | روسیه <span class="star">🌟</span></div><div class="country">🇸🇦 Saudi Arabia | عربستان سعودی</div>
-          <div class="country">🇹🇷 Turkey | ترکیه</div><div class="country">🏴 Israel | اسرائیل</div>
-          <div class="country">🇵🇰 Pakistan | پاکستان</div><div class="country">🇦🇫 Afghanistan | افغانستان</div>
-          <div class="country">🇰🇼 Kuwait | کویت</div><div class="country">🇶🇦 Qatar | قطر</div>
-          <div class="country">🇱🇧 Lebanon | لبنان</div><div class="country">🇾🇪 Yemen | یمن</div>
-          <div class="country">🇴🇲 Oman | عمان</div><div class="country">🇲🇾 Malaysia | مالزی</div>
-          <div class="country">🇵🇸 Palestine | فلسطین</div><div class="country">🇦🇿 Azerbaijan | آذربایجان</div>
-          <div class="country">🇻🇳 Vietnam | ویتنام</div><div class="country">🇹🇼 Taiwan | تایوان</div>
+          <div class="country">🇯🇵 Japan | ژاپن</div>
+          <div class="country">🇰🇵 North Korea | کره شمالی</div>
+          <div class="country">🇰🇷 South Korea | کره جنوبی</div>
+          <div class="country">🇮🇳 India | هند</div>
+          <div class="country">🇷🇺 Russia | روسیه <span class="star">🌟</span></div>
+          <div class="country">🇸🇦 Saudi Arabia | عربستان سعودی</div>
+          <div class="country">🇹🇷 Turkey | ترکیه</div>
+          <div class="country">🏴 Israel | اسرائیل</div>
+          <div class="country">🇵🇰 Pakistan | پاکستان</div>
+          <div class="country">🇦🇫 Afghanistan | افغانستان</div>
+          <div class="country">🇰🇼 Kuwait | کویت</div>
+          <div class="country">🇶🇦 Qatar | قطر</div>
+          <div class="country">🇱🇧 Lebanon | لبنان</div>
+          <div class="country">🇾🇪 Yemen | یمن</div>
+          <div class="country">🇴🇲 Oman | عمان</div>
+          <div class="country">🇲🇾 Malaysia | مالزی</div>
+          <div class="country">🇵🇸 Palestine | فلسطین</div>
+          <div class="country">🇦🇿 Azerbaijan | آذربایجان</div>
+          <div class="country">🇻🇳 Vietnam | ویتنام</div>
+          <div class="country">🇹🇼 Taiwan | تایوان</div>
         </div>
       </details>
 
       <details>
         <summary>🌍 اروپا <span>۱۳ گزینه</span></summary>
+
         <div class="list">
-          <div class="country">🇫🇷 France | فرانسه <span class="star">🌟</span></div><div class="country">🇬🇧 United Kingdom | بریتانیا</div>
-          <div class="country">🇩🇪 Germany | آلمان</div><div class="country">🇪🇸 Spain | اسپانیا</div>
-          <div class="country">🇮🇹 Italy | ایتالیا</div><div class="country">🇭🇷 Croatia | کرواسی</div>
-          <div class="country">🇵🇹 Portugal | پرتغال</div><div class="country">🇧🇪 Belgium | بلژیک</div>
-          <div class="country">🇳🇴 Norway | نروژ</div><div class="country">🇨🇭 Switzerland | سوئیس</div>
-          <div class="country">🇩🇰 Denmark | دانمارک</div><div class="country">🇳🇱 Netherlands | هلند</div>
+          <div class="country">🇫🇷 France | فرانسه <span class="star">🌟</span></div>
+          <div class="country">🇬🇧 United Kingdom | بریتانیا</div>
+          <div class="country">🇩🇪 Germany | آلمان</div>
+          <div class="country">🇪🇸 Spain | اسپانیا</div>
+          <div class="country">🇮🇹 Italy | ایتالیا</div>
+          <div class="country">🇭🇷 Croatia | کرواسی</div>
+          <div class="country">🇵🇹 Portugal | پرتغال</div>
+          <div class="country">🇧🇪 Belgium | بلژیک</div>
+          <div class="country">🇳🇴 Norway | نروژ</div>
+          <div class="country">🇨🇭 Switzerland | سوئیس</div>
+          <div class="country">🇩🇰 Denmark | دانمارک</div>
+          <div class="country">🇳🇱 Netherlands | هلند</div>
           <div class="country">🇺🇦 Ukraine | اوکراین</div>
         </div>
       </details>
 
       <details>
         <summary>🌎 آمریکای شمالی <span>۳ گزینه</span></summary>
+
         <div class="list">
           <div class="country">🇺🇸 United States | آمریکا <span class="star">🌟</span></div>
-          <div class="country">🇨🇦 Canada | کانادا</div><div class="country">🇲🇽 Mexico | مکزیک</div>
+          <div class="country">🇨🇦 Canada | کانادا</div>
+          <div class="country">🇲🇽 Mexico | مکزیک</div>
         </div>
       </details>
 
       <details>
         <summary>🌎 آمریکای جنوبی <span>۳ گزینه</span></summary>
+
         <div class="list">
-          <div class="country">🇧🇷 Brazil | برزیل</div><div class="country">🇦🇷 Argentina | آرژانتین</div>
+          <div class="country">🇧🇷 Brazil | برزیل</div>
+          <div class="country">🇦🇷 Argentina | آرژانتین</div>
           <div class="country">🇻🇪 Venezuela | ونزوئلا</div>
         </div>
       </details>
 
       <details>
         <summary>🌍 آفریقا <span>۷ گزینه</span></summary>
+
         <div class="list">
-          <div class="country">🇪🇬 Egypt | مصر</div><div class="country">🇱🇾 Libya | لیبی</div>
-          <div class="country">🇩🇿 Algeria | الجزایر</div><div class="country">🇲🇦 Morocco | مراکش</div>
-          <div class="country">🇿🇦 South Africa | آفریقای جنوبی</div><div class="country">🇳🇬 Nigeria | نیجریه</div>
+          <div class="country">🇪🇬 Egypt | مصر</div>
+          <div class="country">🇱🇾 Libya | لیبی</div>
+          <div class="country">🇩🇿 Algeria | الجزایر</div>
+          <div class="country">🇲🇦 Morocco | مراکش</div>
+          <div class="country">🇿🇦 South Africa | آفریقای جنوبی</div>
+          <div class="country">🇳🇬 Nigeria | نیجریه</div>
           <div class="country">🇪🇹 Ethiopia | اتیوپی</div>
         </div>
       </details>
 
       <details>
         <summary>🌏 اقیانوسیه <span>۲ گزینه</span></summary>
+
         <div class="list">
-          <div class="country">🇦🇺 Australia | استرالیا</div><div class="country">🇳🇿 New Zealand | نیوزیلند</div>
+          <div class="country">🇦🇺 Australia | استرالیا</div>
+          <div class="country">🇳🇿 New Zealand | نیوزیلند</div>
         </div>
       </details>
 
       <details class="special">
         <summary>🔥 گروه‌های ویژه <span>۷ گزینه</span></summary>
+
         <div class="list">
-          <div class="country">🏴 ISIS | داعش</div><div class="country">🏴‍☠️ Hezbollah | حزب‌الله</div>
-          <div class="country">🚩 IRGC | سپاه پاسداران</div><div class="country">🏳️ Hamas | حماس</div>
-          <div class="country">🚩 CENTCOM | سنتکام</div><div class="country">🚩 Hashd al-Shaabi | حشد الشعبی</div>
+          <div class="country">🏴 ISIS | داعش</div>
+          <div class="country">🏴‍☠️ Hezbollah | حزب‌الله</div>
+          <div class="country">🚩 IRGC | سپاه پاسداران</div>
+          <div class="country">🏳️ Hamas | حماس</div>
+          <div class="country">🚩 CENTCOM | سنتکام</div>
+          <div class="country">🚩 Hashd al-Shaabi | حشد الشعبی</div>
           <div class="country">🕵️ Mossad | موساد</div>
         </div>
       </details>
 
       <details>
         <summary>🏛️ قدرت‌های تاریخی <span>۲ گزینه</span></summary>
+
         <div class="list">
           <div class="country">☭ Soviet Union / USSR | اتحاد جماهیر شوروی ⭐⭐</div>
           <div class="country">☠️ Nazi Germany | آلمان نازی ⭐⭐</div>
@@ -242,50 +734,87 @@ summary span{color:var(--muted);font-size:12px;font-weight:normal}
 
       <details>
         <summary>📰 رسانه‌های خبری <span>۶ گزینه</span></summary>
+
         <div class="list">
-          <div class="country">🌐 Iran International | ایران اینترنشنال</div><div class="country">📺 IRIB | صدا و سیما</div>
-          <div class="country">📰 CNN | سی‌ان‌ان</div><div class="country">🇬🇧 BBC | بی‌بی‌سی</div>
-          <div class="country">🌍 Al Jazeera | الجزیره</div><div class="country">🇺🇸 Fox News | فاکس‌نیوز</div>
+          <div class="country">🌐 Iran International | ایران اینترنشنال</div>
+          <div class="country">📺 IRIB | صدا و سیما</div>
+          <div class="country">📰 CNN | سی‌ان‌ان</div>
+          <div class="country">🇬🇧 BBC | بی‌بی‌سی</div>
+          <div class="country">🌍 Al Jazeera | الجزیره</div>
+          <div class="country">🇺🇸 Fox News | فاکس‌نیوز</div>
         </div>
       </details>
+
     </div>
   </section>
 
+  <!-- پایان -->
   <section>
-    <div class="section-title"><h2>🎮 آماده‌ای؟</h2></div>
+    <div class="section-title">
+      <h2>🎮 آماده‌ای؟</h2>
+    </div>
+
     <div class="hero" style="padding:20px">
-      <p style="margin-bottom:15px">فصل ۶ شروع شده؛ کشور موردنظرت را انتخاب کن و وارد بازی شو.</p>
-      <a class="mainbtn" href="https://rubika.ir/woorld_warIII">⚔️ ورود به جنگ جهانی سوم</a>
+      <p style="margin-bottom:15px">
+        فصل ۶ شروع شده؛ کشور موردنظرت را انتخاب کن و وارد بازی شو.
+      </p>
+
+      <a class="mainbtn" href="https://rubika.ir/woorld_warIII">
+        ⚔️ ورود به جنگ جهانی سوم
+      </a>
     </div>
   </section>
+
 </main>
 
-<footer class="footer">WORLD WAR III • SEASON 06</footer>
+<footer class="footer">
+  WORLD WAR III • SEASON 06
+</footer>
+
 </div>
 
 <script>
 function shareGame(){
-  const data={title:'جنگ جهانی سوم | فصل ۶',text:'🌎⚔️ وارد بازی جنگ جهانی سوم شو! فصل ۶ شروع شده — جایزه فصل: ۴ میلیون',url:location.href};
-  if(navigator.share){navigator.share(data).catch(()=>{});}
-  else{copyInvite();}
+  const data={
+    title:'جنگ جهانی سوم | فصل ۶',
+    text:'🌎⚔️ وارد بازی جنگ جهانی سوم شو! فصل ۶ شروع شده — جایزه فصل: ۴ میلیون',
+    url:location.href
+  };
+
+  if(navigator.share){
+    navigator.share(data).catch(()=>{});
+  }else{
+    copyInvite();
+  }
 }
+
 function copyInvite(){
   navigator.clipboard.writeText(location.href).then(()=>{
     document.getElementById('copymsg').textContent='✅ لینک دعوت کپی شد';
-    setTimeout(()=>document.getElementById('copymsg').textContent='',2500);
+
+    setTimeout(()=>{
+      document.getElementById('copymsg').textContent='';
+    },2500);
+
   }).catch(()=>{
-    document.getElementById('copymsg').textContent='لینک صفحه را از نوار آدرس کپی کن.';
+    document.getElementById('copymsg').textContent=
+      'لینک صفحه را از نوار آدرس کپی کن.';
   });
 }
+
 function filterCountries(){
   const q=document.getElementById('search').value.trim().toLowerCase();
+
   document.querySelectorAll('.country').forEach(el=>{
-    el.style.display = el.textContent.toLowerCase().includes(q) ? '' : 'none';
+    el.style.display=
+      el.textContent.toLowerCase().includes(q) ? '' : 'none';
   });
+
   if(q){
     document.querySelectorAll('details').forEach(d=>d.open=true);
   }
 }
 </script>
+
 </body>
 </html>
