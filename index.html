@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="جنگ جهانی سوم - فصل ششم">
-  <title>🌎 جنگ جهانی سوم | فصل ۶</title>
+
+  <meta name="description" content="جنگ جهانی سوم - لیست رسمی کشورها و گروه‌های قابل انتخاب">
+
+  <title>🌎 جنگ جهانی سوم | World War III</title>
 
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -25,17 +31,19 @@
       color: inherit;
     }
 
+    /* HEADER */
+
     header {
       background: linear-gradient(135deg, #101722, #171d28);
       border-bottom: 1px solid #293241;
       padding: 18px 20px;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
     }
 
     .header-content {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
       display: flex;
       justify-content: space-between;
@@ -44,8 +52,9 @@
     }
 
     .logo {
-      font-size: 21px;
+      font-size: 20px;
       font-weight: bold;
+      white-space: nowrap;
     }
 
     .logo span {
@@ -56,6 +65,7 @@
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     nav a {
@@ -63,11 +73,14 @@
       padding: 8px 13px;
       border-radius: 10px;
       font-size: 14px;
+      transition: 0.2s;
     }
 
     nav a:hover {
-      background: #303b4b;
+      background: #e53935;
     }
+
+    /* HERO */
 
     .hero {
       max-width: 1100px;
@@ -87,7 +100,7 @@
 
     .hero p {
       color: #b8c0cc;
-      max-width: 700px;
+      max-width: 750px;
       margin: auto;
       font-size: 17px;
     }
@@ -105,31 +118,49 @@
       border-radius: 12px;
       font-weight: bold;
       display: inline-block;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 15px;
     }
 
     .primary {
       background: #e53935;
+      color: white;
+    }
+
+    .primary:hover {
+      background: #c62828;
     }
 
     .secondary {
       background: #202936;
       border: 1px solid #343f4e;
+      color: white;
     }
 
+    .secondary:hover {
+      background: #303b4b;
+    }
+
+    /* CONTAINER */
+
     .container {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
       padding: 20px;
     }
 
     .section {
-      margin: 35px 0;
+      margin: 45px 0;
     }
 
     .section-title {
       font-size: 25px;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
+
+    /* QUICK CARDS */
 
     .cards {
       display: grid;
@@ -155,7 +186,7 @@
 
     .quick-link {
       display: block;
-      transition: .2s;
+      transition: 0.2s;
     }
 
     .quick-link:hover {
@@ -163,25 +194,7 @@
       border-color: #e53935;
     }
 
-    .season {
-      background: linear-gradient(135deg, #161d28, #0f141c);
-      border: 1px solid #303a49;
-      border-radius: 18px;
-      padding: 28px;
-      text-align: center;
-    }
-
-    .season h2 {
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
-
-    .prize {
-      color: #ffd54f;
-      font-size: 22px;
-      font-weight: bold;
-      margin-top: 10px;
-    }
+    /* CHAMPIONS */
 
     .champions {
       display: grid;
@@ -197,6 +210,17 @@
       text-align: center;
     }
 
+    .champion h3 {
+      margin-bottom: 5px;
+    }
+
+    .champion p {
+      color: #aeb7c4;
+      font-size: 14px;
+    }
+
+    /* COUNTRY SEARCH */
+
     .country-search {
       width: 100%;
       padding: 14px;
@@ -205,13 +229,18 @@
       background: #111720;
       color: white;
       outline: none;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       font-size: 15px;
+      font-family: inherit;
+    }
+
+    .country-search:focus {
+      border-color: #e53935;
     }
 
     .country-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 10px;
     }
 
@@ -221,19 +250,45 @@
       padding: 13px;
       border-radius: 11px;
       text-align: center;
+      transition: 0.2s;
+      cursor: default;
     }
 
     .country:hover {
       border-color: #e53935;
+      transform: translateY(-2px);
     }
+
+    .category-title {
+      grid-column: 1 / -1;
+      margin-top: 25px;
+      margin-bottom: 5px;
+      padding: 14px;
+      border-radius: 12px;
+      background: #111720;
+      border: 1px solid #293442;
+      color: #fff;
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    /* CTA */
 
     .cta {
       text-align: center;
       background: #111720;
+      border: 1px solid #252e3a;
       border-radius: 18px;
       padding: 35px 20px;
-      margin: 45px 0;
+      margin: 55px 0;
     }
+
+    .cta p {
+      color: #aeb7c4;
+      margin-top: 8px;
+    }
+
+    /* FOOTER */
 
     footer {
       text-align: center;
@@ -243,12 +298,20 @@
       font-size: 13px;
     }
 
-    /* Welcome Popup */
+    footer a {
+      color: #fff;
+    }
+
+    footer a:hover {
+      color: #e53935;
+    }
+
+    /* WELCOME POPUP */
 
     .welcome-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, .88);
+      background: rgba(0, 0, 0, 0.9);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -264,7 +327,7 @@
       border-radius: 22px;
       padding: 35px 25px;
       text-align: center;
-      box-shadow: 0 20px 60px rgba(0,0,0,.5);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     }
 
     .welcome-box .icon {
@@ -283,6 +346,8 @@
     }
 
     .welcome-box .prize {
+      color: #ffd54f;
+      font-weight: bold;
       margin-bottom: 20px;
     }
 
@@ -296,19 +361,114 @@
       padding: 14px;
       border-radius: 12px;
       font-weight: bold;
+      font-family: inherit;
+    }
+
+    .enter-btn:hover {
+      background: #c62828;
     }
 
     .hidden {
+      display: none !important;
+    }
+
+    /* ID MODAL */
+
+    .id-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.88);
       display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 9998;
+    }
+
+    .id-overlay.show {
+      display: flex;
+    }
+
+    .id-box {
+      width: 100%;
+      max-width: 430px;
+      background: #111720;
+      border: 1px solid #343f4e;
+      border-radius: 20px;
+      padding: 30px 22px;
+      text-align: center;
+    }
+
+    .id-box h2 {
+      margin-bottom: 10px;
+    }
+
+    .id-box p {
+      color: #aeb7c4;
+      margin-bottom: 18px;
+    }
+
+    .id-display {
+      background: #080b10;
+      border: 1px solid #303a49;
+      border-radius: 12px;
+      padding: 14px;
+      font-size: 20px;
+      font-weight: bold;
+      direction: ltr;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .copy-btn {
+      width: 100%;
+      padding: 13px;
+      border: 0;
+      border-radius: 11px;
+      background: #e53935;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .copy-btn:hover {
+      background: #c62828;
+    }
+
+    .close-btn {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #303a49;
+      border-radius: 11px;
+      background: #202936;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-family: inherit;
+    }
+
+    .copy-message {
+      color: #66bb6a;
+      font-size: 13px;
+      margin-top: 10px;
+      min-height: 22px;
     }
 
     @media (max-width: 650px) {
+
       .header-content {
         flex-direction: column;
       }
 
       nav {
-        justify-content: center;
+        width: 100%;
+      }
+
+      nav a {
+        font-size: 13px;
       }
 
       .hero {
@@ -318,14 +478,28 @@
       .hero p {
         font-size: 15px;
       }
+
+      .country-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 400px) {
+      .country-list {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Welcome Popup -->
+  <!-- ========================= -->
+  <!-- WELCOME POPUP -->
+  <!-- ========================= -->
+
   <div class="welcome-overlay" id="welcomePopup">
+
     <div class="welcome-box">
 
       <div class="icon">🌎⚔️</div>
@@ -333,12 +507,12 @@
       <h2>به جنگ جهانی سوم خوش آمدید!</h2>
 
       <p>
-        🔥 فصل ۶ آغاز شده است!<br>
+        🔥 فصل جدید آغاز شده است!<br>
         کشور خود را انتخاب کن، وارد رقابت شو و برای قهرمانی تلاش کن.
       </p>
 
       <div class="prize">
-        🏆 جایزه قهرمان فصل: ۴ میلیون
+        🏆 جایزه قهرمان: ۴ میلیون
       </div>
 
       <button class="enter-btn" onclick="enterGame()">
@@ -346,11 +520,49 @@
       </button>
 
     </div>
+
   </div>
 
 
-  <!-- Header -->
+  <!-- ========================= -->
+  <!-- ID MODAL -->
+  <!-- ========================= -->
+
+  <div class="id-overlay" id="idModal">
+
+    <div class="id-box">
+
+      <h2>👤 انتخاب کشور و شروع بازی</h2>
+
+      <p>
+        برای انتخاب کشور، داخل روبیکا به آیدی زیر پیام دهید:
+      </p>
+
+      <div class="id-display" id="gameId">
+        @eliyas_1188
+      </div>
+
+      <button class="copy-btn" onclick="copyGameId()">
+        📋 کپی آیدی
+      </button>
+
+      <div class="copy-message" id="copyMessage"></div>
+
+      <button class="close-btn" onclick="closeIdModal()">
+        ✖ بستن
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ========================= -->
+  <!-- HEADER -->
+  <!-- ========================= -->
+
   <header>
+
     <div class="header-content">
 
       <div class="logo">
@@ -358,18 +570,32 @@
       </div>
 
       <nav>
+
         <a href="#home">خانه</a>
-        <a href="#season">فصل ۶</a>
-        <a href="#countries">کشورها</a>
-        <a href="rules.html">📜 قوانین</a>
-        <a href="tutorial.html">🎮 آموزش بازی</a>
+
+        <a href="rules.html">
+          📜 قوانین
+        </a>
+
+        <a href="tutorial.html">
+          🎮 آموزش بازی
+        </a>
+
+        <a href="#countries">
+          🌍 کشورها
+        </a>
+
       </nav>
 
     </div>
+
   </header>
 
 
-  <!-- Hero -->
+  <!-- ========================= -->
+  <!-- HERO -->
+  <!-- ========================= -->
+
   <section class="hero" id="home">
 
     <h1>
@@ -377,20 +603,21 @@
     </h1>
 
     <p>
-      وارد بزرگ‌ترین رقابت استراتژیک بازی شو،
-      کشور خودت را انتخاب کن، اقتصاد و منابع خود را مدیریت کن
-      و برای قهرمانی فصل تلاش کن.
+      وارد رقابت شو، کشور خودت را انتخاب کن،
+      منابع و دارایی‌های خود را مدیریت کن
+      و برای قهرمانی تلاش کن.
     </p>
 
     <div class="buttons">
 
-      <a
+      <!-- ONLY ID MODAL -->
+      <button
         class="btn primary"
-        href="https://rubika.ir/eliyas_1188"
-        target="_blank">
+        onclick="openIdModal()">
         🌍 انتخاب کشور
-      </a>
+      </button>
 
+      <!-- DIRECT RUBIKA CHANNEL -->
       <a
         class="btn secondary"
         href="https://rubika.ir/woorld_warIII"
@@ -403,171 +630,333 @@
   </section>
 
 
+  <!-- ========================= -->
+  <!-- MAIN -->
+  <!-- ========================= -->
+
   <main class="container">
 
-    <!-- Quick Links -->
+
+    <!-- QUICK LINKS -->
+
     <section class="section">
 
-      <h2 class="section-title">⚡ دسترسی سریع</h2>
+      <h2 class="section-title">
+        ⚡ دسترسی سریع
+      </h2>
 
       <div class="cards">
 
-        <a class="card quick-link" href="rules.html">
-          <h3>📜 قوانین بازی</h3>
+
+        <!-- RULES -->
+
+        <a
+          class="card quick-link"
+          href="rules.html">
+
+          <h3>
+            📜 قوانین بازی
+          </h3>
+
           <p>
-            قوانین کامل دوئل، بیانیه، تحریم، جنگ اجباری و اتحاد.
+            مشاهده قوانین کامل دوئل، بیانیه،
+            تحریم، جنگ اجباری و اتحاد.
           </p>
+
         </a>
 
-        <a class="card quick-link" href="tutorial.html">
-          <h3>🎮 آموزش بازی</h3>
+
+        <!-- TUTORIAL -->
+
+        <a
+          class="card quick-link"
+          href="tutorial.html">
+
+          <h3>
+            🎮 آموزش بازی
+          </h3>
+
           <p>
-            از انتخاب کشور تا رقابت و دریافت جایزه قهرمانی.
+            آموزش کامل بازی از انتخاب کشور
+            تا مراحل رقابت و دریافت جایزه.
           </p>
+
         </a>
+
+
+        <!-- SHOP DIRECT -->
 
         <a
           class="card quick-link"
           href="https://rubika.ir/shopwaarr"
           target="_blank">
-          <h3>🛒 فروشگاه</h3>
+
+          <h3>
+            🛒 فروشگاه
+          </h3>
+
           <p>
-            مشاهده امکانات و خریدهای مربوط به بازی.
+            ورود مستقیم به کانال فروشگاه بازی.
           </p>
+
         </a>
+
+
+        <!-- ASSETS DIRECT -->
 
         <a
           class="card quick-link"
           href="https://rubika.ir/daraei__world"
           target="_blank">
-          <h3>💰 دارایی کشورها</h3>
+
+          <h3>
+            💰 دارایی کشورها
+          </h3>
+
           <p>
-            مشاهده اطلاعات، تجهیزات و دارایی‌های کشورها.
+            مشاهده اطلاعات و دارایی‌های کشورها.
           </p>
+
         </a>
 
-      </div>
-
-    </section>
-
-
-    <!-- Season -->
-    <section class="section" id="season">
-
-      <div class="season">
-
-        <h2>🔥 فصل ششم</h2>
-
-        <p>
-          فصل جدید جنگ جهانی سوم آغاز شده است.
-        </p>
-
-        <div class="prize">
-          🏆 جایزه قهرمان: ۴ میلیون
-        </div>
-
-        <div class="buttons">
-
-          <a
-            class="btn primary"
-            href="https://rubika.ir/eliyas_1188"
-            target="_blank">
-            🎮 شروع بازی
-          </a>
-
-        </div>
 
       </div>
 
     </section>
 
 
-    <!-- Champions -->
+    <!-- ========================= -->
+    <!-- CHAMPIONS -->
+    <!-- ========================= -->
+
     <section class="section">
 
-      <h2 class="section-title">🏆 قهرمانان فصل‌های گذشته</h2>
+      <h2 class="section-title">
+        🏆 قهرمانان فصل‌های گذشته
+      </h2>
 
       <div class="champions">
 
-        <div class="champion">
-          <h3>🇺🇸 ایالات متحده آمریکا</h3>
-          <p>قهرمان فصل گذشته</p>
-        </div>
 
         <div class="champion">
-          <h3>🇮🇷 ایران</h3>
-          <p>قهرمان فصل چهارم</p>
+
+          <h3>
+            🇺🇸 ایالات متحده آمریکا
+          </h3>
+
+          <p>
+            قهرمان فصل گذشته
+          </p>
+
         </div>
+
+
+        <div class="champion">
+
+          <h3>
+            🇮🇷 ایران
+          </h3>
+
+          <p>
+            قهرمان فصل چهارم
+          </p>
+
+        </div>
+
 
       </div>
 
     </section>
 
 
-    <!-- Countries -->
+    <!-- ========================= -->
+    <!-- COUNTRY LIST -->
+    <!-- ========================= -->
+
     <section class="section" id="countries">
 
-      <h2 class="section-title">🌍 کشورهای بازی</h2>
+      <h2 class="section-title">
+        🌎 لیست رسمی کشورها و گروه‌های قابل انتخاب
+      </h2>
 
       <input
         type="text"
         id="countrySearch"
         class="country-search"
-        placeholder="🔎 جستجوی کشور..."
+        placeholder="🔎 جستجوی کشور یا گروه..."
         onkeyup="searchCountries()"
       >
 
+
       <div class="country-list" id="countryList">
 
-        <div class="country">🇮🇷 ایران</div>
-        <div class="country">🇺🇸 آمریکا</div>
-        <div class="country">🇨🇳 چین</div>
-        <div class="country">🇷🇺 روسیه</div>
-        <div class="country">🇯🇵 ژاپن</div>
-        <div class="country">🇮🇹 ایتالیا</div>
-        <div class="country">🇮🇱 اسرائیل</div>
-        <div class="country">🇺🇦 اوکراین</div>
-        <div class="country">🇰🇷 کره جنوبی</div>
-        <div class="country">🇳🇱 هلند</div>
-        <div class="country">🇳🇴 نروژ</div>
-        <div class="country">🇲🇽 مکزیک</div>
-        <div class="country">🇻🇳 ویتنام</div>
-        <div class="country">🇹🇼 تایوان</div>
-        <div class="country">🇦🇿 آذربایجان</div>
-        <div class="country">🇿🇦 آفریقای جنوبی</div>
-        <div class="country">🇳🇬 نیجریه</div>
-        <div class="country">🇪🇹 اتیوپی</div>
-        <div class="country">🇱🇾 لیبی</div>
-        <div class="country">🇩🇿 الجزایر</div>
-        <div class="country">🇲🇦 مراکش</div>
-        <div class="country">🇪🇬 مصر</div>
-        <div class="country">🇻🇪 ونزوئلا</div>
-        <div class="country">🇦🇺 استرالیا</div>
-        <div class="country">🇳🇿 نیوزیلند</div>
+
+        <!-- ASIA -->
+
+        <div class="category-title">
+          🌏 𝗔𝗦𝗜𝗔 | کشورهای آسیایی
+        </div>
+
+        <div class="country">🇮🇷 Iran | ایران 🌟✅</div>
+        <div class="country">🇨🇳 China | چین 🌟</div>
+        <div class="country">🇯🇵 Japan | ژاپن</div>
+        <div class="country">🇰🇵 North Korea | کره شمالی</div>
+        <div class="country">🇰🇷 South Korea | کره جنوبی</div>
+        <div class="country">🇮🇳 India | هند</div>
+        <div class="country">🇷🇺 Russia | روسیه 🌟</div>
+        <div class="country">🇸🇦 Saudi Arabia | عربستان سعودی</div>
+        <div class="country">🇹🇷 Turkey | ترکیه</div>
+        <div class="country">🏴 Israel | اسرائیل</div>
+        <div class="country">🇵🇰 Pakistan | پاکستان</div>
+        <div class="country">🇦🇫 Afghanistan | افغانستان ✅</div>
+        <div class="country">🇰🇼 Kuwait | کویت</div>
+        <div class="country">🇶🇦 Qatar | قطر</div>
+        <div class="country">🇱🇧 Lebanon | لبنان</div>
+        <div class="country">🇾🇪 Yemen | یمن</div>
+        <div class="country">🇴🇲 Oman | عمان</div>
+        <div class="country">🇲🇾 Malaysia | مالزی</div>
+        <div class="country">🇵🇸 Palestine | فلسطین</div>
+        <div class="country">🇦🇿 Azerbaijan | آذربایجان</div>
+        <div class="country">🇻🇳 Vietnam | ویتنام</div>
+        <div class="country">🇹🇼 Taiwan | تایوان</div>
+
+
+        <!-- EUROPE -->
+
+        <div class="category-title">
+          🌍 𝗘𝗨𝗥𝗢𝗣𝗘 | کشورهای اروپایی
+        </div>
+
+        <div class="country">🇫🇷 France | فرانسه 🌟</div>
+        <div class="country">🇬🇧 United Kingdom | بریتانیا</div>
+        <div class="country">🇩🇪 Germany | آلمان</div>
+        <div class="country">🇪🇸 Spain | اسپانیا</div>
+        <div class="country">🇮🇹 Italy | ایتالیا</div>
+        <div class="country">🇭🇷 Croatia | کرواسی</div>
+        <div class="country">🇵🇹 Portugal | پرتغال</div>
+        <div class="country">🇧🇪 Belgium | بلژیک</div>
+        <div class="country">🇳🇴 Norway | نروژ</div>
+        <div class="country">🇨🇭 Switzerland | سوئیس</div>
+        <div class="country">🇩🇰 Denmark | دانمارک</div>
+        <div class="country">🇳🇱 Netherlands | هلند ✅</div>
+        <div class="country">🇺🇦 Ukraine | اوکراین</div>
+
+
+        <!-- NORTH AMERICA -->
+
+        <div class="category-title">
+          🌎 𝗡𝗢𝗥𝗧𝗛 𝗔𝗠𝗘𝗥𝗜𝗖𝗔 | آمریکای شمالی
+        </div>
+
+        <div class="country">🇺🇸 United States | آمریکا 🌟✅</div>
+        <div class="country">🇨🇦 Canada | کانادا</div>
+        <div class="country">🇲🇽 Mexico | مکزیک</div>
+
+
+        <!-- SOUTH AMERICA -->
+
+        <div class="category-title">
+          🌎 𝗦𝗢𝗨𝗧𝗛 𝗔𝗠𝗘𝗥𝗜𝗖𝗔 | آمریکای جنوبی
+        </div>
+
+        <div class="country">🇧🇷 Brazil | برزیل</div>
+        <div class="country">🇦🇷 Argentina | آرژانتین</div>
+        <div class="country">🇻🇪 Venezuela | ونزوئلا</div>
+
+
+        <!-- AFRICA -->
+
+        <div class="category-title">
+          🌍 𝗔𝗙𝗥𝗜𝗖𝗔 | کشورهای آفریقایی
+        </div>
+
+        <div class="country">🇪🇬 Egypt | مصر</div>
+        <div class="country">🇱🇾 Libya | لیبی</div>
+        <div class="country">🇩🇿 Algeria | الجزایر</div>
+        <div class="country">🇲🇦 Morocco | مراکش</div>
+        <div class="country">🇿🇦 South Africa | آفریقای جنوبی</div>
+        <div class="country">🇳🇬 Nigeria | نیجریه</div>
+        <div class="country">🇪🇹 Ethiopia | اتیوپی</div>
+
+
+        <!-- OCEANIA -->
+
+        <div class="category-title">
+          🌏 𝗢𝗖𝗘𝗔𝗡𝗜𝗔 | اقیانوسیه
+        </div>
+
+        <div class="country">🇦🇺 Australia | استرالیا</div>
+        <div class="country">🇳🇿 New Zealand | نیوزیلند</div>
+
+
+        <!-- SPECIAL GROUPS -->
+
+        <div class="category-title">
+          🔥 𝗦𝗣𝗘𝗖𝗜𝗔𝗟 𝗚𝗥𝗢𝗨𝗣𝗦 | گروه‌های ویژه
+        </div>
+
+        <div class="country">🏴 ISIS | داعش</div>
+        <div class="country">🏴‍☠️ Hezbollah | حزب‌الله</div>
+        <div class="country">🚩 IRGC | سپاه پاسداران ✅</div>
+        <div class="country">🏳️ Hamas | حماس</div>
+        <div class="country">🚩 CENTCOM | سنتکام ✅</div>
+        <div class="country">🚩 Hashd al-Shaabi | حشد الشعبی</div>
+        <div class="country">🕵️ Mossad | موساد</div>
+
+
+        <!-- HISTORICAL POWERS -->
+
+        <div class="category-title">
+          🏛️ 𝗛𝗜𝗦𝗧𝗢𝗥𝗜𝗖𝗔𝗟 𝗣𝗢𝗪𝗘𝗥𝗦 | قدرت‌های تاریخی
+        </div>
+
+        <div class="country">☭ Soviet Union / USSR | اتحاد جماهیر شوروی ⭐⭐</div>
+        <div class="country">☠️ Nazi Germany | آلمان نازی ⭐⭐</div>
+
+
+        <!-- NEWS CHANNELS -->
+
+        <div class="category-title">
+          📰📡 𝗡𝗘𝗪𝗦 𝗖𝗛𝗔𝗡𝗡𝗘𝗟𝗦 | رسانه‌های خبری
+        </div>
+
+        <div class="country">🌐 Iran International | ایران اینترنشنال</div>
+        <div class="country">📺 IRIB | صدا و سیما ✅</div>
+        <div class="country">📰 CNN | سی‌ان‌ان</div>
+        <div class="country">🇬🇧 BBC | بی‌بی‌سی</div>
+        <div class="country">🌍 Al Jazeera | الجزیره</div>
+        <div class="country">🇺🇸 Fox News | فاکس‌نیوز</div>
+
 
       </div>
 
     </section>
 
 
-    <!-- CTA -->
+    <!-- ========================= -->
+    <!-- FINAL CTA -->
+    <!-- ========================= -->
+
     <section class="cta">
 
-      <h2>⚔️ آماده‌ای وارد بازی شوی؟</h2>
+      <h2>
+        ⚔️ آماده‌ای وارد بازی شوی؟
+      </h2>
 
       <p>
-        کشور خودت را انتخاب کن و فصل ششم را شروع کن.
+        کشور خودت را انتخاب کن و بازی را شروع کن.
       </p>
 
       <div class="buttons">
 
-        <a
+        <!-- ID MODAL -->
+        <button
           class="btn primary"
-          href="https://rubika.ir/eliyas_1188"
-          target="_blank">
-          🌍 انتخاب کشور
-        </a>
+          onclick="openIdModal()">
+          🎮 شروع بازی
+        </button>
 
+        <!-- DIRECT CHANNEL -->
         <a
           class="btn secondary"
           href="https://rubika.ir/woorld_warIII"
@@ -579,17 +968,22 @@
 
     </section>
 
+
   </main>
 
 
-  <!-- Footer -->
+  <!-- ========================= -->
+  <!-- FOOTER -->
+  <!-- ========================= -->
+
   <footer>
 
-    🌎⚔️ جنگ جهانی سوم | فصل ۶
+    🌎⚔️ جنگ جهانی سوم
 
     <br><br>
 
     کانال اصلی:
+
     <a
       href="https://rubika.ir/woorld_warIII"
       target="_blank">
@@ -599,46 +993,141 @@
   </footer>
 
 
+  <!-- ========================= -->
+  <!-- JAVASCRIPT -->
+  <!-- ========================= -->
+
   <script>
 
-    // ورود به سایت
+    /* ورود به سایت */
+
     function enterGame() {
-      document.getElementById("welcomePopup").classList.add("hidden");
+
+      document
+        .getElementById("welcomePopup")
+        .classList.add("hidden");
+
       document.body.style.overflow = "auto";
     }
 
 
-    // جستجوی کشورها
+    /* باز کردن پنجره آیدی */
+
+    function openIdModal() {
+
+      document
+        .getElementById("idModal")
+        .classList.add("show");
+
+    }
+
+
+    /* بستن پنجره آیدی */
+
+    function closeIdModal() {
+
+      document
+        .getElementById("idModal")
+        .classList.remove("show");
+
+      document
+        .getElementById("copyMessage")
+        .textContent = "";
+
+    }
+
+
+    /* کپی آیدی */
+
+    function copyGameId() {
+
+      const id = "@eliyas_1188";
+
+      navigator.clipboard.writeText(id)
+        .then(function() {
+
+          document
+            .getElementById("copyMessage")
+            .textContent = "✅ آیدی با موفقیت کپی شد";
+
+        })
+        .catch(function() {
+
+          document
+            .getElementById("copyMessage")
+            .textContent =
+              "⚠️ کپی خودکار انجام نشد؛ آیدی را دستی کپی کنید.";
+
+        });
+
+    }
+
+
+    /* جستجوی کشورها و گروه‌ها */
+
     function searchCountries() {
 
-      let input =
-        document.getElementById("countrySearch")
-        .value
-        .toLowerCase();
+      const input =
+        document
+          .getElementById("countrySearch")
+          .value
+          .toLowerCase()
+          .trim();
 
-      let countries =
+      const items =
         document.querySelectorAll(".country");
 
-      countries.forEach(function(country) {
+      const categories =
+        document.querySelectorAll(".category-title");
 
-        let text =
-          country.textContent.toLowerCase();
+
+      items.forEach(function(item) {
+
+        const text =
+          item.textContent.toLowerCase();
 
         if (text.includes(input)) {
-          country.style.display = "block";
+
+          item.style.display = "block";
+
         } else {
-          country.style.display = "none";
+
+          item.style.display = "none";
+
         }
+
+      });
+
+
+      /* هنگام جستجو، عنوان دسته‌ها پنهان نشود */
+
+      categories.forEach(function(category) {
+
+        category.style.display = "block";
 
       });
 
     }
 
 
-    // جلوگیری از اسکرول هنگام نمایش پنجره خوش‌آمدگویی
+    /* جلوگیری از اسکرول هنگام نمایش خوش‌آمدگویی */
+
     document.body.style.overflow = "hidden";
+
+
+    /* بستن پنجره با کلیک بیرون */
+
+    document
+      .getElementById("idModal")
+      .addEventListener("click", function(event) {
+
+        if (event.target === this) {
+          closeIdModal();
+        }
+
+      });
 
   </script>
 
 </body>
-</html>
+  </html>
