@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="جنگ جهانی سوم - بازی استراتژیک آنلاین روبیکا، فصل ششم">
-<meta name="keywords" content="جنگ جهانی سوم, بازی جنگ جهانی, روبیکا, World War III">
+<title>جنگ جهانی سوم | فصل ۶</title>
 
-<title>🌎⚔️ جنگ جهانی سوم | فصل ۶</title>
+<meta name="description"
+content="جنگ جهانی سوم - فصل ۶. انتخاب کشور، رقابت جهانی و جایزه ۴ میلیون برای قهرمان فصل.">
 
 <style>
 *{
@@ -20,1372 +20,1591 @@ html{
 
 body{
     margin:0;
-    background:#050b14;
-    color:#edf5ff;
     font-family:Tahoma,Arial,sans-serif;
+    background:
+        radial-gradient(circle at top,#17213d 0,#080d1b 45%,#050812 100%);
+    color:#fff;
     line-height:1.8;
 }
 
 a{
-    text-decoration:none;
     color:inherit;
-}
-
-button{
-    font-family:inherit;
-    cursor:pointer;
+    text-decoration:none;
 }
 
 .container{
-    width:min(1100px,92%);
+    width:min(94%,900px);
     margin:auto;
 }
 
-/* HEADER */
-
-header{
+.header{
+    padding:18px 0;
     position:sticky;
     top:0;
     z-index:50;
-    background:rgba(5,11,20,.95);
-    border-bottom:1px solid #20364d;
-    backdrop-filter:blur(10px);
+    background:rgba(5,8,18,.88);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-.nav{
-    min-height:68px;
+.header-inner{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:12px;
+    gap:10px;
 }
 
 .logo{
-    font-size:19px;
-    font-weight:900;
-    white-space:nowrap;
-}
-
-.logo span{
-    color:#62c4ff;
-}
-
-.nav-links{
-    display:flex;
-    flex-wrap:wrap;
-    gap:7px;
-}
-
-.nav-links a{
-    padding:7px 11px;
-    border-radius:10px;
-    background:#0d1b2b;
-    border:1px solid #20364d;
-    font-size:13px;
-}
-
-.nav-links a:hover{
-    background:#142a40;
-}
-
-/* HERO */
-
-.hero{
-    padding:75px 0 55px;
-    text-align:center;
-    background:
-    radial-gradient(circle at top,#123653 0,#07111f 48%,#050b14 100%);
-}
-
-.badge{
-    display:inline-block;
-    padding:6px 14px;
-    border:1px solid #2e79a9;
-    border-radius:999px;
-    background:#0b2033;
-    color:#7ed0ff;
-    font-size:13px;
-}
-
-.hero h1{
-    font-size:clamp(35px,7vw,64px);
-    margin:15px 0 8px;
-}
-
-.hero p{
-    max-width:760px;
-    margin:10px auto 25px;
-    color:#b6c6d8;
-}
-
-.buttons{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:10px;
-}
-
-.btn{
-    display:inline-block;
-    padding:10px 17px;
-    border-radius:11px;
-    border:1px solid #294963;
-    background:#10263b;
-    color:white;
-    font-weight:bold;
-}
-
-.btn:hover{
-    transform:translateY(-1px);
-}
-
-.btn-primary{
-    background:#1686c8;
-    border-color:#3bb2f3;
-}
-
-/* SECTIONS */
-
-section{
-    padding:45px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.section-title h2{
-    margin:0 0 5px;
-    font-size:28px;
-}
-
-.section-title p{
-    margin:0;
-    color:#91a5ba;
-}
-
-/* CARDS */
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-}
-
-.card{
-    background:#0a1422;
-    border:1px solid #1d354d;
-    border-radius:18px;
-    padding:21px;
-    box-shadow:0 8px 30px rgba(0,0,0,.15);
-}
-
-.card-center{
-    text-align:center;
-}
-
-.card h3{
-    margin:7px 0;
-}
-
-.card p{
-    color:#afbed0;
-}
-
-.icon{
-    font-size:32px;
-}
-
-/* QUICK */
-
-.quick-card{
-    text-align:center;
-}
-
-.quick-card .btn{
-    display:block;
-    margin-top:13px;
-}
-
-/* STATS */
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:12px;
-}
-
-.stat{
-    text-align:center;
-    background:#0a1422;
-    border:1px solid #1d354d;
-    border-radius:16px;
-    padding:20px;
-}
-
-.stat strong{
-    display:block;
-    font-size:27px;
-    color:#69c8ff;
-}
-
-/* COUNTRIES */
-
-.search{
-    width:100%;
-    padding:13px 15px;
-    margin-bottom:15px;
-    border-radius:12px;
-    border:1px solid #29435c;
-    background:#07111e;
-    color:white;
-    font-size:15px;
-    outline:none;
-}
-
-.country-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:10px;
-}
-
-.country{
-    padding:12px;
-    background:#0a1422;
-    border:1px solid #1d354d;
-    border-radius:12px;
-    text-align:center;
-}
-
-/* SHOP */
-
-.shop-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
-}
-
-.item{
-    background:#0a1422;
-    border:1px solid #1d354d;
-    border-radius:15px;
-    padding:17px;
-}
-
-.item b{
-    color:#70caff;
-}
-
-/* WARNING */
-
-.warning{
-    margin-top:17px;
-    padding:17px;
-    border-radius:13px;
-    background:#291b0b;
-    border:1px solid #76511e;
-    color:#ffd68a;
-}
-
-/* OVERLAY */
-
-.overlay{
-    position:fixed;
-    inset:0;
-    z-index:100;
-    background:rgba(0,0,0,.88);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-}
-
-.welcome{
-    width:min(520px,100%);
-    background:#0a1422;
-    border:1px solid #2c5877;
-    border-radius:23px;
-    padding:30px;
-    text-align:center;
-    box-shadow:0 20px 70px #000;
-}
-
-.welcome h2{
-    font-size:28px;
-    margin:8px 0;
-}
-
-/* MODAL */
-
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    z-index:90;
-    background:rgba(0,0,0,.8);
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-}
-
-.modal-box{
-    width:min(480px,100%);
-    background:#0a1422;
-    border:1px solid #2c5877;
-    border-radius:20px;
-    padding:26px;
-    text-align:center;
-}
-
-.country-id{
-    margin:15px 0;
-    padding:12px;
-    background:#07111e;
-    border-radius:10px;
-    color:#69c8ff;
     font-size:20px;
     font-weight:900;
 }
 
-.close-btn{
-    padding:9px 20px;
-    border-radius:10px;
-    background:#182a3d;
-    border:1px solid #34516a;
-    color:white;
+.badge{
+    padding:5px 10px;
+    border-radius:20px;
+    background:rgba(255,255,255,.08);
+    font-size:12px;
 }
 
-/* FOOTER */
+.hero{
+    text-align:center;
+    padding:55px 10px 35px;
+}
+
+.hero h1{
+    font-size:clamp(30px,7vw,52px);
+    margin:0 0 12px;
+    font-weight:900;
+}
+
+.hero p{
+    color:#c9d0e4;
+    max-width:650px;
+    margin:0 auto 25px;
+}
+
+.mainbtn,
+.primary{
+    display:inline-block;
+    border:0;
+    cursor:pointer;
+    padding:13px 20px;
+    border-radius:14px;
+    background:linear-gradient(135deg,#315cff,#673cff);
+    color:#fff;
+    font-weight:800;
+    box-shadow:0 8px 25px rgba(49,92,255,.22);
+}
+
+.secondary{
+    display:inline-block;
+    border:1px solid rgba(255,255,255,.12);
+    cursor:pointer;
+    padding:12px 18px;
+    border-radius:14px;
+    background:rgba(255,255,255,.06);
+    color:#fff;
+    font-weight:700;
+}
+
+.quick-links{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin-top:18px;
+}
+
+.quick-links a{
+    padding:9px 14px;
+    border-radius:12px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
+    font-size:14px;
+}
+
+.section{
+    margin:25px 0;
+}
+
+.section-title{
+    margin-bottom:15px;
+}
+
+.section-title h2{
+    margin:0;
+    font-size:24px;
+}
+
+.card{
+    background:rgba(255,255,255,.055);
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:18px;
+    box-shadow:0 15px 45px rgba(0,0,0,.15);
+}
+
+.card h2{
+    margin-top:0;
+}
+
+.muted{
+    color:#b9c1d5;
+}
+
+.season-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:12px;
+}
+
+.stat{
+    padding:17px;
+    border-radius:16px;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.stat strong{
+    display:block;
+    font-size:24px;
+    margin-top:5px;
+}
+
+.invite{
+    text-align:center;
+}
+
+.copy-btn{
+    margin-top:10px;
+}
+
+.champions{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:12px;
+}
+
+.champion{
+    padding:18px;
+    border-radius:17px;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.country-search{
+    width:100%;
+    padding:14px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(0,0,0,.2);
+    color:#fff;
+    outline:none;
+    margin-bottom:15px;
+}
+
+.country-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:10px;
+}
+
+.country{
+    padding:13px;
+    border-radius:14px;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.07);
+    cursor:pointer;
+    transition:.2s;
+}
+
+.country:hover{
+    transform:translateY(-2px);
+    background:rgba(255,255,255,.08);
+}
+
+.country-name{
+    font-weight:800;
+}
+
+.country-details{
+    display:none;
+    margin-top:8px;
+    color:#bbc4da;
+    font-size:13px;
+}
+
+.country.open .country-details{
+    display:block;
+}
+
+/* =========================
+   تجهیزات
+========================= */
+
+#equipmentSection{
+    margin-top:30px;
+}
+
+#equipmentLogin{
+    margin-top:15px;
+}
+
+#countryCode{
+    width:100%;
+    padding:14px;
+    border-radius:13px;
+    border:1px solid rgba(255,255,255,.13);
+    background:rgba(0,0,0,.22);
+    color:#fff;
+    font-size:16px;
+    outline:none;
+    margin:10px 0;
+}
+
+#countryCard,
+#equipmentCard,
+#resultCard{
+    display:none;
+    margin-top:18px;
+}
+
+#equipmentContainer{
+    margin-top:15px;
+}
+
+#equipmentContainer .category{
+    margin:15px 0;
+    padding:13px;
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:17px;
+    background:rgba(255,255,255,.035);
+}
+
+#equipmentContainer .category-title{
+    font-size:18px;
+    font-weight:900;
+    margin-bottom:8px;
+}
+
+#equipmentContainer .item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    padding:11px 0;
+    border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+#equipmentContainer .item:last-child{
+    border-bottom:0;
+}
+
+#equipmentContainer .info{
+    flex:1;
+    min-width:0;
+}
+
+#equipmentContainer .name{
+    display:block;
+    font-weight:800;
+}
+
+#equipmentContainer .price{
+    display:block;
+    color:#aeb7cc;
+    font-size:12px;
+    margin-top:2px;
+}
+
+.qty{
+    width:85px;
+    padding:9px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,.13);
+    background:rgba(0,0,0,.25);
+    color:#fff;
+    text-align:center;
+}
+
+#copyText{
+    width:100%;
+    resize:vertical;
+    padding:13px;
+    border-radius:13px;
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(0,0,0,.25);
+    color:#fff;
+    margin:10px 0;
+    font-family:Tahoma,Arial,sans-serif;
+}
+
+.message{
+    padding:15px;
+    border-radius:14px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.warning{
+    color:#ffd36a;
+    font-size:13px;
+}
 
 footer{
-    border-top:1px solid #20364d;
-    padding:30px 0;
     text-align:center;
-    color:#91a5ba;
+    color:#8e98ad;
+    padding:35px 10px;
+    font-size:13px;
 }
 
-footer a{
-    color:#68c8ff;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:850px){
-
-    .nav{
-        flex-direction:column;
-        padding:10px 0;
-    }
-
-    .grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .shop-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .stats{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .country-grid{
-        grid-template-columns:1fr 1fr;
-    }
-}
-
-@media(max-width:550px){
-
-    .grid{
-        grid-template-columns:1fr;
-    }
-
-    .shop-grid{
-        grid-template-columns:1fr;
-    }
-
-    .country-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
+@media(max-width:600px){
     .hero{
-        padding:50px 0 40px;
+        padding-top:40px;
     }
 
-    .hero h1{
-        font-size:38px;
+    .card{
+        padding:15px;
     }
 
-    .nav-links{
-        justify-content:center;
+    #equipmentContainer .item{
+        align-items:flex-start;
     }
+
+    .qty{
+        width:70px;
+    }
+}
+
+/* خوش‌آمدگویی */
+#welcomeOverlay{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    background:#050812;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+}
+
+.welcome-box{
+    max-width:500px;
+}
+
+.welcome-box h1{
+    font-size:38px;
+    margin:0 0 10px;
+}
+
+.welcome-box p{
+    color:#b9c1d5;
+}
+
+#welcomeOverlay.hide{
+    opacity:0;
+    visibility:hidden;
+    transition:.5s;
 }
 </style>
 </head>
 
 <body>
 
-<!-- =========================
-     WELCOME
-========================= -->
-
-<div class="overlay" id="welcomeOverlay">
-
-    <div class="welcome">
-
-        <div class="icon">🌎⚔️</div>
-
-        <h2>به جنگ جهانی سوم خوش آمدید!</h2>
-
-        <p>🔥 فصل ۶ آغاز شده است!</p>
-
-        <p>
-            کشور خود را انتخاب کنید،
-            وارد رقابت شوید و برای جایزه
-            <strong>۴ میلیون</strong>
-            رقابت کنید.
-        </p>
-
-        <button class="btn btn-primary" onclick="enterSite()">
-            🚀 ورود به بازی
-        </button>
-
+<!-- خوش آمدگویی -->
+<div id="welcomeOverlay">
+    <div class="welcome-box">
+        <div style="font-size:60px">🌎⚔️</div>
+        <h1>جنگ جهانی سوم</h1>
+        <p>به فصل ششم بازی خوش آمدید</p>
+        <button class="primary" onclick="enterSite()">🚀 ورود به بازی</button>
     </div>
-
 </div>
 
-
-<!-- =========================
-     COUNTRY MODAL
-========================= -->
-
-<div class="modal" id="countryModal">
-
-    <div class="modal-box">
-
-        <div class="icon">📋</div>
-
-        <h2>انتخاب کشور</h2>
-
-        <p>
-            برای انتخاب کشور، داخل روبیکا
-            به آیدی زیر پیام دهید:
-        </p>
-
-        <div class="country-id">
-            @eliyas_1188
-        </div>
-
-        <a
-            class="btn btn-primary"
-            href="https://rubika.ir/eliyas_1188"
-            target="_blank"
-        >
-            🔗 باز کردن روبیکا
-        </a>
-
-        <br><br>
-
-        <button
-            class="close-btn"
-            onclick="closeCountryModal()"
-        >
-            بستن
-        </button>
-
+<header class="header">
+    <div class="container header-inner">
+        <div class="logo">🌎⚔️ جنگ جهانی سوم</div>
+        <div class="badge">فصل ۶</div>
     </div>
-
-</div>
-
-
-<!-- =========================
-     HEADER
-========================= -->
-
-<header>
-
-<div class="container nav">
-
-    <a class="logo" href="#">
-        🌎 <span>WORLD WAR III</span>
-    </a>
-
-    <nav class="nav-links">
-
-        <a href="#quick">
-            ⚡ دسترسی سریع
-        </a>
-
-        <a href="#season">
-            🏆 فصل
-        </a>
-
-        <a href="#countries">
-            🌎 کشورها
-        </a>
-
-        <a href="#shop">
-            🛒 تجهیزات
-        </a>
-
-        <a href="./rules.html">
-            📜 قوانین
-        </a>
-
-        <a href="./tutorial.html">
-            🎮 آموزش
-        </a>
-
-    </nav>
-
-</div>
-
 </header>
 
-
-<!-- =========================
-     MAIN
-========================= -->
-
-<main>
-
+<main class="container">
 
 <!-- HERO -->
-
 <section class="hero">
-
-<div class="container">
-
-    <span class="badge">
-        ⚔️ SEASON 6 • OFFICIAL
-    </span>
-
-    <h1>
-        🌎 جنگ جهانی سوم
-    </h1>
+    <h1>🌎 جنگ جهانی سوم ⚔️</h1>
 
     <p>
-        یک بازی استراتژیک و رقابتی در روبیکا؛
-        کشور خودت را انتخاب کن، اقتصاد بساز،
-        تجهیزات تهیه کن و طبق قوانین بازی رقابت کن.
+        وارد دنیای رقابت جهانی شو، کشور خودت را انتخاب کن،
+        تجهیزات بساز و برای قهرمانی فصل بجنگ.
     </p>
 
-    <div class="buttons">
+    <a class="mainbtn"
+       href="https://rubika.ir/woorld_warIII"
+       target="_blank">
+        ⚔️ ورود به کانال اصلی بازی
+    </a>
 
-        <a
-            class="btn btn-primary"
-            href="https://rubika.ir/woorld_warIII"
-            target="_blank"
-        >
-            📢 ورود به کانال اصلی
+    <div class="quick-links">
+        <a href="rules.html">📜 قوانین بازی</a>
+        <a href="tutorial.html">📚 آموزش بازی</a>
+        <a href="https://rubika.ir/eliyas_1188" target="_blank">
+            🌎 انتخاب کشور
         </a>
+        <a href="https://rubika.ir/shopwaarr" target="_blank">
+            🛒 فروشگاه
+        </a>
+        <a href="https://rubika.ir/daraei__world" target="_blank">
+            💰 دارایی کشورها
+        </a>
+    </div>
+</section>
 
-        <button
-            class="btn"
-            onclick="showCountryModal()"
+<!-- فصل -->
+<section class="section">
+    <div class="section-title">
+        <h2>🏆 اطلاعات فصل</h2>
+    </div>
+
+    <div class="card">
+        <div class="season-grid">
+
+            <div class="stat">
+                🎮 فصل فعلی
+                <strong>۶</strong>
+            </div>
+
+            <div class="stat">
+                💰 جایزه قهرمان
+                <strong>۴ میلیون</strong>
+            </div>
+
+            <div class="stat">
+                🌎 بازی
+                <strong>جنگ جهانی سوم</strong>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- دعوت -->
+<section class="section">
+    <div class="card invite">
+        <h2>📢 دوستانت را به بازی دعوت کن</h2>
+
+        <p class="muted">
+            لینک سایت را برای دوستانت ارسال کن تا آنها هم وارد بازی شوند.
+        </p>
+
+        <button class="primary copy-btn" onclick="copyInvite()">
+            📋 کپی لینک سایت
+        </button>
+    </div>
+</section>
+
+<!-- قهرمانان -->
+<section class="section">
+
+    <div class="section-title">
+        <h2>👑 قهرمانان گذشته</h2>
+    </div>
+
+    <div class="champions">
+
+        <div class="champion">
+            🇺🇸
+            <strong>ایالات متحده آمریکا</strong>
+            <p class="muted">قهرمان فصل گذشته</p>
+        </div>
+
+        <div class="champion">
+            🇮🇷
+            <strong>ایران</strong>
+            <p class="muted">قهرمان فصل چهارم</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- کشورها -->
+<section class="section">
+
+    <div class="section-title">
+        <h2>🌎 کشورهای بازی</h2>
+    </div>
+
+    <div class="card">
+
+        <input
+            id="countrySearch"
+            class="country-search"
+            placeholder="🔎 جستجوی کشور..."
+            oninput="filterCountries()"
         >
-            🌍 انتخاب کشور
+
+        <div class="country-grid">
+
+            <div class="country">
+                <span class="country-name">🇮🇷 ایران</span>
+                <div class="country-details">کد تجهیزات: 8090</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇨🇳 چین</span>
+                <div class="country-details">کد تجهیزات: 2147</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇯🇵 ژاپن</span>
+                <div class="country-details">کد تجهیزات: 5831</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇰🇵 کره شمالی</span>
+                <div class="country-details">کد تجهیزات: 7264</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇰🇷 کره جنوبی</span>
+                <div class="country-details">کد تجهیزات: 3918</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇮🇳 هند</span>
+                <div class="country-details">کد تجهیزات: 6452</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇷🇺 روسیه</span>
+                <div class="country-details">کد تجهیزات: 9073</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇸🇦 عربستان</span>
+                <div class="country-details">کد تجهیزات: 4186</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇹🇷 ترکیه</span>
+                <div class="country-details">کد تجهیزات: 5329</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇮🇱 اسرائیل</span>
+                <div class="country-details">کد تجهیزات: 7615</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇵🇰 پاکستان</span>
+                <div class="country-details">کد تجهیزات: 2843</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇦🇫 افغانستان</span>
+                <div class="country-details">کد تجهیزات: 6197</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇰🇼 کویت</span>
+                <div class="country-details">کد تجهیزات: 4508</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇶🇦 قطر</span>
+                <div class="country-details">کد تجهیزات: 8732</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇱🇧 لبنان</span>
+                <div class="country-details">کد تجهیزات: 3265</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇾🇪 یمن</span>
+                <div class="country-details">کد تجهیزات: 5940</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇴🇲 عمان</span>
+                <div class="country-details">کد تجهیزات: 1478</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇲🇾 مالزی</span>
+                <div class="country-details">کد تجهیزات: 6824</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇵🇸 فلسطین</span>
+                <div class="country-details">کد تجهیزات: 9351</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇦🇿 آذربایجان</span>
+                <div class="country-details">کد تجهیزات: 5076</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇻🇳 ویتنام</span>
+                <div class="country-details">کد تجهیزات: 3189</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇹🇼 تایوان</span>
+                <div class="country-details">کد تجهیزات: 7542</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇫🇷 فرانسه</span>
+                <div class="country-details">کد تجهیزات: 6295</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇬🇧 بریتانیا</span>
+                <div class="country-details">کد تجهیزات: 4817</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇩🇪 آلمان</span>
+                <div class="country-details">کد تجهیزات: 8630</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇪🇸 اسپانیا</span>
+                <div class="country-details">کد تجهیزات: 2754</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇮🇹 ایتالیا</span>
+                <div class="country-details">کد تجهیزات: 9146</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇭🇷 کرواسی</span>
+                <div class="country-details">کد تجهیزات: 3502</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇵🇹 پرتغال</span>
+                <div class="country-details">کد تجهیزات: 7468</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇧🇪 بلژیک</span>
+                <div class="country-details">کد تجهیزات: 1925</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇳🇴 نروژ</span>
+                <div class="country-details">کد تجهیزات: 6381</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇨🇭 سوئیس</span>
+                <div class="country-details">کد تجهیزات: 8247</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇩🇰 دانمارک</span>
+                <div class="country-details">کد تجهیزات: 4163</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇳🇱 هلند</span>
+                <div class="country-details">کد تجهیزات: 5709</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇺🇦 اوکراین</span>
+                <div class="country-details">کد تجهیزات: 2836</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇺🇸 آمریکا</span>
+                <div class="country-details">کد تجهیزات: 9514</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇨🇦 کانادا</span>
+                <div class="country-details">کد تجهیزات: 3672</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇲🇽 مکزیک</span>
+                <div class="country-details">کد تجهیزات: 8053</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇧🇷 برزیل</span>
+                <div class="country-details">کد تجهیزات: 6248</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇦🇷 آرژانتین</span>
+                <div class="country-details">کد تجهیزات: 1397</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇻🇪 ونزوئلا</span>
+                <div class="country-details">کد تجهیزات: 4725</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇪🇬 مصر</span>
+                <div class="country-details">کد تجهیزات: 7160</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇱🇾 لیبی</span>
+                <div class="country-details">کد تجهیزات: 3584</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇩🇿 الجزایر</span>
+                <div class="country-details">کد تجهیزات: 9026</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇲🇦 مراکش</span>
+                <div class="country-details">کد تجهیزات: 5413</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇿🇦 آفریقای جنوبی</span>
+                <div class="country-details">کد تجهیزات: 6879</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇳🇬 نیجریه</span>
+                <div class="country-details">کد تجهیزات: 2305</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇪🇹 اتیوپی</span>
+                <div class="country-details">کد تجهیزات: 8142</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇦🇺 استرالیا</span>
+                <div class="country-details">کد تجهیزات: 4961</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇳🇿 نیوزیلند</span>
+                <div class="country-details">کد تجهیزات: 7628</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+     خرید تجهیزات
+========================= -->
+
+<section class="section" id="equipmentSection">
+
+    <div class="section-title">
+        <h2>🛒 خرید تجهیزات کشور</h2>
+    </div>
+
+    <div class="card" id="equipmentLogin">
+
+        <h2>🔐 ورود به خرید تجهیزات</h2>
+
+        <p class="muted">
+            کد اختصاصی کشور خود را وارد کنید.
+        </p>
+
+        <input
+            id="countryCode"
+            type="text"
+            inputmode="numeric"
+            placeholder="مثلاً 8090"
+        >
+
+        <button class="primary" onclick="loginCountry()">
+            🚀 ورود
+        </button>
+
+        <p id="loginError"
+           class="warning"
+           style="display:none;">
+        </p>
+
+    </div>
+
+    <div id="countryCard" class="card">
+
+        <h2>🌎 کشور شما</h2>
+
+        <p id="countryWelcome" class="muted"></p>
+
+        <button class="primary" onclick="showEquipment()">
+            ➡️ ادامه و مشاهده تجهیزات
         </button>
 
     </div>
 
-</div>
+    <div id="equipmentCard" class="card">
+
+        <h2>🛠️ انتخاب تجهیزات</h2>
+
+        <p class="muted">
+            تعداد تجهیزات موردنظر را وارد کنید.
+        </p>
+
+        <p class="warning">
+            ⚠️ تجهیزات درآمدزا حداکثر ۱۰ عدد قابل خرید هستند.
+            تجهیزات غیر درآمدزا محدودیت ۱۰تایی ندارند.
+        </p>
+
+        <div id="equipmentContainer"></div>
+
+        <button class="primary" onclick="calculatePurchase()">
+            🛒 ثبت خرید و محاسبه
+        </button>
+
+    </div>
+
+    <div id="resultCard" class="card">
+
+        <h2>✅ اطلاعات خرید آماده شد</h2>
+
+        <p class="muted">
+            متن زیر را کپی کنید و برای ادمین تجهیزات ارسال کنید.
+        </p>
+
+        <textarea id="copyText" rows="14" readonly></textarea>
+
+        <button class="primary" onclick="copyPurchase()">
+            📋 کپی اطلاعات خرید
+        </button>
+
+        <button class="secondary"
+                onclick="showAdmin()">
+            👤 ادمین تجهیزات
+        </button>
+
+        <div id="adminBox"
+             class="message"
+             style="display:none;margin-top:15px;">
+
+            📌 شناسه ادمین تجهیزات در پیام سنجاق‌شده
+            کانال اصلی بازی قرار دارد.
+
+            <br><br>
+
+            <a class="mainbtn"
+               href="https://rubika.ir/woorld_warIII"
+               target="_blank">
+                ⚔️ ورود به کانال اصلی
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
-
-
-<!-- QUICK LINKS -->
-
-<section id="quick">
-
-<div class="container">
-
-<div class="section-title">
-
-    <h2>⚡ دسترسی سریع</h2>
-
-    <p>
-        تمام بخش‌های مهم بازی در یکجا
-    </p>
-
-</div>
-
-
-<div class="grid">
-
-
-<div class="card quick-card">
-
-    <div class="icon">🌍</div>
-
-    <h3>
-        انتخاب کشور
-    </h3>
-
-    <p>
-        ثبت کشور برای شروع بازی
-    </p>
-
-    <button
-        class="btn btn-primary"
-        onclick="showCountryModal()"
-    >
-        انتخاب کشور
-    </button>
-
-</div>
-
-
-<div class="card quick-card">
-
-    <div class="icon">📢</div>
-
-    <h3>
-        کانال اصلی
-    </h3>
-
-    <p>
-        اخبار و اطلاعیه‌های رسمی
-    </p>
-
-    <a
-        class="btn"
-        href="https://rubika.ir/woorld_warIII"
-        target="_blank"
-    >
-        ورود به کانال
-    </a>
-
-</div>
-
-
-<div class="card quick-card">
-
-    <div class="icon">🛒</div>
-
-    <h3>
-        شاپ بازی
-    </h3>
-
-    <p>
-        مشاهده فروشگاه بازی
-    </p>
-
-    <a
-        class="btn"
-        href="https://rubika.ir/shopwaarr"
-        target="_blank"
-    >
-        ورود به شاپ
-    </a>
-
-</div>
-
-
-<div class="card quick-card">
-
-    <div class="icon">💰</div>
-
-    <h3>
-        دارایی کشورها
-    </h3>
-
-    <p>
-        مشاهده پول و تجهیزات
-    </p>
-
-    <a
-        class="btn"
-        href="https://rubika.ir/daraei__world"
-        target="_blank"
-    >
-        مشاهده دارایی
-    </a>
-
-</div>
-
-
-<div class="card quick-card">
-
-    <div class="icon">📜</div>
-
-    <h3>
-        قوانین رسمی
-    </h3>
-
-    <p>
-        قوانین کامل بازی
-    </p>
-
-    <a
-        class="btn btn-primary"
-        href="./rules.html"
-    >
-        📜 مشاهده قوانین
-    </a>
-
-</div>
-
-
-<div class="card quick-card">
-
-    <div class="icon">🎮</div>
-
-    <h3>
-        آموزش بازی
-    </h3>
-
-    <p>
-        راهنمای کامل شروع بازی
-    </p>
-
-    <a
-        class="btn btn-primary"
-        href="./tutorial.html"
-    >
-        🎮 مشاهده آموزش
-    </a>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SEASON -->
-
-<section id="season">
-
-<div class="container">
-
-<div class="section-title">
-
-    <h2>
-        🏆 فصل ششم
-    </h2>
-
-    <p>
-        رقابت جدید آغاز شده است
-    </p>
-
-</div>
-
-
-<div class="stats">
-
-    <div class="stat">
-
-        <strong>۶</strong>
-
-        فصل جاری
-
-    </div>
-
-
-    <div class="stat">
-
-        <strong>۴M</strong>
-
-        جایزه فصل
-
-    </div>
-
-
-    <div class="stat">
-
-        <strong>⚔️</strong>
-
-        رقابت کشورها
-
-    </div>
-
-
-    <div class="stat">
-
-        <strong>📢</strong>
-
-        مدیریت رسمی
-
-    </div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CHAMPIONS -->
-
-<section>
-
-<div class="container">
-
-<div class="section-title">
-
-    <h2>
-        👑 قهرمانان گذشته
-    </h2>
-
-    <p>
-        سوابق ثبت‌شده مسابقات
-    </p>
-
-</div>
-
-
-<div class="grid">
-
-
-<div class="card card-center">
-
-    <div class="icon">
-        🇺🇸
-    </div>
-
-    <h3>
-        ایالات متحده آمریکا
-    </h3>
-
-    <p>
-        🥇 قهرمان فصل گذشته
-    </p>
-
-</div>
-
-
-<div class="card card-center">
-
-    <div class="icon">
-        🇮🇷
-    </div>
-
-    <h3>
-        ایران
-    </h3>
-
-    <p>
-        🥇 قهرمان فصل چهارم
-    </p>
-
-</div>
-
-
-<div class="card card-center">
-
-    <div class="icon">
-        🏆
-    </div>
-
-    <h3>
-        فصل ششم
-    </h3>
-
-    <p>
-        در حال برگزاری
-    </p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- COUNTRIES -->
-
-<section id="countries">
-
-<div class="container">
-
-<div class="section-title">
-
-    <h2>
-        🌎 کشورهای بازی
-    </h2>
-
-    <p>
-        فهرست کشورهای ثبت‌شده
-    </p>
-
-</div>
-
-
-<input
-    class="search"
-    id="countrySearch"
-    type="text"
-    placeholder="🔎 جستجوی کشور..."
-    oninput="filterCountries()"
->
-
-
-<div
-    class="country-grid"
-    id="countryList"
->
-
-
-<div class="country">🇯🇵 ژاپن</div>
-
-<div class="country">🇮🇷 ایران</div>
-
-<div class="country">🪖 سپاه</div>
-
-<div class="country">🇮🇱 اسرائیل</div>
-
-<div class="country">🇮🇹 ایتالیا</div>
-
-<div class="country">🇱🇧 حزب‌الله</div>
-
-<div class="country">🇵🇸 حماس</div>
-
-<div class="country">🇺🇦 اوکراین</div>
-
-<div class="country">🇺🇸 آمریکا</div>
-
-<div class="country">🇾🇪 یمن</div>
-
-<div class="country">🇰🇷 کره جنوبی</div>
-
-<div class="country">🇳🇱 هلند</div>
-
-<div class="country">🇳🇴 نروژ</div>
-
-<div class="country">🇷🇺 روسیه</div>
-
-<div class="country">🇭🇷 کرواسی</div>
-
-<div class="country">🇲🇽 مکزیک</div>
-
-<div class="country">🇦🇿 آذربایجان</div>
-
-<div class="country">🇻🇳 ویتنام</div>
-
-<div class="country">🇹🇼 تایوان</div>
-
-<div class="country">🇿🇦 آفریقای جنوبی</div>
-
-<div class="country">🇳🇬 نیجریه</div>
-
-<div class="country">🇪🇹 اتیوپی</div>
-
-<div class="country">🇱🇾 لیبی</div>
-
-<div class="country">🇩🇿 الجزایر</div>
-
-<div class="country">🇲🇦 مراکش</div>
-
-<div class="country">🇪🇬 مصر</div>
-
-<div class="country">🇻🇪 ونزوئلا</div>
-
-<div class="country">🇳🇿 نیوزیلند</div>
-
-<div class="country">🇦🇺 استرالیا</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SHOP -->
-
-<section id="shop">
-
-<div class="container">
-
-<div class="section-title">
-
-    <h2>
-        🛒 تجهیزات و اقتصاد بازی
-    </h2>
-
-    <p>
-        قیمت‌های ثبت‌شده در سیستم اقتصادی بازی
-    </p>
-
-</div>
-
-
-<div class="shop-grid">
-
-
-<div class="item">
-🏢 آپارتمان لوکس
-<br>
-<b>500K</b>
-</div>
-
-
-<div class="item">
-🏠 آپارتمان معمولی
-<br>
-<b>250K</b>
-</div>
-
-
-<div class="item">
-🏫 مدرسه
-<br>
-<b>500K</b>
-</div>
-
-
-<div class="item">
-🎡 شهربازی
-<br>
-<b>500K</b>
-</div>
-
-
-<div class="item">
-🌉 پل
-<br>
-<b>100K</b>
-</div>
-
-
-<div class="item">
-🎬 سینما
-<br>
-<b>2M</b>
-</div>
-
-
-<div class="item">
-🏥 بیمارستان
-<br>
-<b>500K</b>
-</div>
-
-
-<div class="item">
-🍽️ رستوران
-<br>
-<b>100K</b>
-</div>
-
-
-<div class="item">
-🎓 دانشگاه
-<br>
-<b>1M</b>
-</div>
-
-
-<div class="item">
-🛣️ ساخت جاده
-<br>
-<b>800K</b>
-</div>
-
-
-<div class="item">
-🏭 کارخانه ماشین‌سازی
-<br>
-<b>1M + 500K درآمد روزانه</b>
-</div>
-
-
-<div class="item">
-👟 کارخانه کفش
-<br>
-<b>600K + 250K درآمد روزانه</b>
-</div>
-
-
-<div class="item">
-🥤 کارخانه نوشابه
-<br>
-<b>100K + 20K درآمد روزانه</b>
-</div>
-
-
-<div class="item">
-🍬 کارخانه شیرینی
-<br>
-<b>150K + 50K درآمد روزانه</b>
-</div>
-
-
-<div class="item">
-⛏️ کارخانه مس
-<br>
-<b>650K + 300K درآمد روزانه</b>
-</div>
-
-
-<div class="item">
-🍇 مزرعه انگور
-<br>
-<b>800K + 400K درآمد روزانه</b>
-</div>
-
-
-<div class="item">
-🍅 مزرعه گوجه و خیار
-<br>
-<b>450K + 220K درآمد روزانه</b>
-</div>
-
-
-<div class="item">
-🥬 مزرعه سبزی
-<br>
-<b>250K + 100K درآمد روزانه</b>
-</div>
-
-
-<div class="item">
-🥗 مزرعه کاهو
-<br>
-<b>500K + 250K درآمد روزانه</b>
-</div>
-
-
-<div class="item">
-☀️ نیروگاه خورشیدی
-<br>
-<b>70M</b>
-</div>
-
-
-</div>
-
-
-<div class="warning">
-
-⚠️ قیمت‌ها و تجهیزات این بخش مربوط به سیستم اقتصادی بازی هستند
-و ممکن است با تصمیم مدیریت در فصل‌های آینده تغییر کنند.
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- RULES AND TUTORIAL -->
-
-<section>
-
-<div class="container">
-
-<div class="section-title">
-
-    <h2>
-        📖 قوانین و آموزش
-    </h2>
-
-    <p>
-        قبل از شروع بازی حتماً این دو بخش را مطالعه کنید
-    </p>
-
-</div>
-
-
-<div class="grid">
-
-
-<div class="card card-center">
-
-    <div class="icon">
-        📜
-    </div>
-
-    <h3>
-        قوانین رسمی بازی
-    </h3>
-
-    <p>
-        قوانین دوئل، بیانیه،
-        تحریم، جنگ اجباری و اتحادها.
-    </p>
-
-    <a
-        class="btn btn-primary"
-        href="./rules.html"
-    >
-        📜 مشاهده قوانین کامل
-    </a>
-
-</div>
-
-
-<div class="card card-center">
-
-    <div class="icon">
-        🎮
-    </div>
-
-    <h3>
-        آموزش بازی
-    </h3>
-
-    <p>
-        راهنمای مرحله‌به‌مرحله
-        شروع بازی، اقتصاد و رقابت.
-    </p>
-
-    <a
-        class="btn btn-primary"
-        href="./tutorial.html"
-    >
-        🎮 مشاهده آموزش کامل
-    </a>
-
-</div>
-
-
-<div class="card card-center">
-
-    <div class="icon">
-        ⚠️
-    </div>
-
-    <h3>
-        هشدار مدیریت بازی
-    </h3>
-
-    <p>
-        رعایت تمامی قوانین برای تمام بازیکنان الزامی است.
-    </p>
-
-    <p>
-        ⛔ عدم رعایت قوانین باعث حذف شما از بازی خواهد شد.
-    </p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
 
 </main>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
-
 <footer>
-
-<div class="container">
-
-    <p>
-        🌎⚔️ جنگ جهانی سوم | فصل ۶
-    </p>
-
-    <p>
-        کانال اصلی:
-        <a
-            href="https://rubika.ir/woorld_warIII"
-            target="_blank"
-        >
-            @woorld_warIII
-        </a>
-    </p>
-
-    <p>
-        © مدیریت بازی | تمامی حقوق محفوظ است.
-    </p>
-
-</div>
-
+    🌎⚔️ جنگ جهانی سوم
+    <br>
+    فصل ۶ | جایزه قهرمان: ۴ میلیون
+    <br><br>
+    @woorld_warIII
 </footer>
-
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
 
 <script>
 
-function enterSite(){
+/* =========================
+   کد کشورهای تجهیزات
+========================= */
 
-    document.getElementById("welcomeOverlay").style.display="none";
+const countryCodes = {
+
+    "8090":"🇮🇷 ایران",
+    "2147":"🇨🇳 چین",
+    "5831":"🇯🇵 ژاپن",
+    "7264":"🇰🇵 کره شمالی",
+    "3918":"🇰🇷 کره جنوبی",
+    "6452":"🇮🇳 هند",
+    "9073":"🇷🇺 روسیه",
+    "4186":"🇸🇦 عربستان",
+    "5329":"🇹🇷 ترکیه",
+    "7615":"🇮🇱 اسرائیل",
+    "2843":"🇵🇰 پاکستان",
+    "6197":"🇦🇫 افغانستان",
+    "4508":"🇰🇼 کویت",
+    "8732":"🇶🇦 قطر",
+    "3265":"🇱🇧 لبنان",
+    "5940":"🇾🇪 یمن",
+    "1478":"🇴🇲 عمان",
+    "6824":"🇲🇾 مالزی",
+    "9351":"🇵🇸 فلسطین",
+    "5076":"🇦🇿 آذربایجان",
+    "3189":"🇻🇳 ویتنام",
+    "7542":"🇹🇼 تایوان",
+
+    "6295":"🇫🇷 فرانسه",
+    "4817":"🇬🇧 بریتانیا",
+    "8630":"🇩🇪 آلمان",
+    "2754":"🇪🇸 اسپانیا",
+    "9146":"🇮🇹 ایتالیا",
+    "3502":"🇭🇷 کرواسی",
+    "7468":"🇵🇹 پرتغال",
+    "1925":"🇧🇪 بلژیک",
+    "6381":"🇳🇴 نروژ",
+    "8247":"🇨🇭 سوئیس",
+    "4163":"🇩🇰 دانمارک",
+    "5709":"🇳🇱 هلند",
+    "2836":"🇺🇦 اوکراین",
+
+    "9514":"🇺🇸 آمریکا",
+    "3672":"🇨🇦 کانادا",
+    "8053":"🇲🇽 مکزیک",
+    "6248":"🇧🇷 برزیل",
+    "1397":"🇦🇷 آرژانتین",
+    "4725":"🇻🇪 ونزوئلا",
+
+    "7160":"🇪🇬 مصر",
+    "3584":"🇱🇾 لیبی",
+    "9026":"🇩🇿 الجزایر",
+    "5413":"🇲🇦 مراکش",
+    "6879":"🇿🇦 آفریقای جنوبی",
+    "2305":"🇳🇬 نیجریه",
+    "8142":"🇪🇹 اتیوپی",
+
+    "4961":"🇦🇺 استرالیا",
+    "7628":"🇳🇿 نیوزیلند"
+};
+
+
+/* =========================
+   تجهیزات
+========================= */
+
+const equipmentData = {
+
+"🪖 نیروها":[
+
+["سرباز معمولی",100000,0],
+["سرباز تکاور",200000,0],
+["سرباز ویژه",500000,0],
+["سرباز RPGزن",100000,0],
+["افراد شورشی",250000,0],
+["افراد ضدشورش",250000,0],
+["تک‌تیرانداز عملیاتی",90000,0],
+["خلبان جنگنده",150000,0],
+["خلبان بمب‌افکن",200000,0],
+["هکر",180000,0],
+["متخصص امنیت سایبری",120000,0],
+["متخصص جنگ سایبری",180000,0]
+
+],
+
+"🚀 موشک‌ها":[
+
+["موشک قاره‌پیما",300000,0],
+["موشک فراصوت",250000,0],
+["موشک کروز دوربرد",150000,0],
+["موشک ضدکشتی",200000,0],
+["موشک ضد‌رادار",150000,0],
+["موشک کروز دریایی",180000,0],
+["موشک هایپرسونیک",150000,0],
+["موشک کروز نزدیک‌برد",100000,0],
+["موشک بالستیک",200000,0],
+["موشک خیبرشکن",220000,0],
+["موشک تاماهاوک",250000,0],
+["موشک شهاب 1",300000,0],
+["موشک شهاب 2",200000,0],
+["موشک میکا",250000,0],
+["موشک حرارتی",200000,0],
+["موشک سنگرشکن",350000,0],
+["AIM-120",150000,0],
+["R-77",150000,0],
+["Kh-31",150000,0],
+["موشک همر",300000,0]
+
+],
+
+"🛩️ پهپادها":[
+
+["هرمس 900",200000,0],
+["MQ-9",200000,0],
+["MQ-9 ریپر",200000,0],
+["شاهد 131",150000,0],
+["شاهد 136",100000,0],
+["پهپاد انتحاری",150000,0]
+
+],
+
+"✈️ هواپیماها":[
+
+["F-14",40000,0],
+["F-15",50000,0],
+["F-22",150000,0],
+["F-35",300000,0],
+["B-2",500000,0],
+["F-117",300000,0],
+["Su-35",100000,0],
+["Su-27",80000,0],
+["Su-57",200000,0],
+["B-1",400000,0],
+["B-52",350000,0],
+["J-11",100000,0],
+["J-20",200000,0]
+
+],
+
+"🛡️ پدافند":[
+
+["پدافند ضدجنگنده",150000,0],
+["X-400 / S-400",150000,0],
+["THAAD",200000,0],
+["گنبد آهنین",200000,0],
+["S-500",200000,0],
+["سوم خرداد",150000,0],
+["پاتریوت",250000,0],
+["SAMP/T",200000,0],
+["پدافند ایوا",200000,0]
+
+],
+
+"🛡️ تانک‌ها":[
+
+["چلنجر 3",1000000,0],
+["تایگر",2000000,0],
+["چلنجر",800000,0],
+["لئوپارد",500000,0],
+["آج‌سی",500000,0],
+["AMX-13",900000,0]
+
+],
+
+"🚢 تجهیزات دریایی":[
+
+["ناو آبراهام لینکلن",8000000,0],
+["ناو جرالد فورد",7000000,0],
+["ناو جورج بوش",5000000,0],
+["ناو شارل دوگل",6000000,0],
+["ناو کاوور",4000000,0],
+["زیردریایی",500000,0]
+
+],
+
+"🏭 تجهیزات درآمدزا":[
+
+["معدن الماس",2000000,2000000],
+["معدن طلا",1000000,700000],
+["معدن نقره",900000,350000],
+["معدن سنگ",350000,90000],
+["کارخانه ماشین‌سازی",1000000,500000],
+["کارخانه کفش‌پوشی",600000,250000],
+["کارخانه نوشابه",100000,20000],
+["کارخانه شیرینی‌پزی",150000,50000],
+["کارخانه مس‌سازی",650000,300000],
+["مزرعه انگور",800000,400000],
+["مزرعه گوجه و خیار",450000,220000],
+["مزرعه سبزی",250000,100000],
+["مزرعه کاهو",500000,250000],
+["نیروگاه خورشیدی",70000000,15000000],
+["نیروگاه بادی",5000000,1000000],
+["نیروگاه حرارتی",10000000,3000000],
+["نیروگاه آبی",3000000,500000]
+
+],
+
+"🏗️ ساختمان‌ها":[
+
+["آپارتمان لاکچری",500000,0],
+["آپارتمان معمولی",250000,0],
+["مدرسه",500000,0],
+["شهربازی",500000,0],
+["پل",100000,0],
+["سینما",2000000,0],
+["بیمارستان",500000,0],
+["رستوران",100000,0],
+["دانشگاه",1000000,0],
+["فرودگاه",2000000,0],
+["راه‌سازی",800000,0],
+["کارخانه ماشین‌سازی",1000000,0],
+["پایگاه زمینی",1000000,0],
+["پایگاه هوایی",2000000,0],
+["پایگاه دریایی",2000000,0]
+
+]
+
+};
+
+
+/* کشور انتخاب شده */
+
+let selectedCountry = "";
+let selectedCode = "";
+
+
+/* ورود کشور */
+
+function loginCountry(){
+
+    const code =
+        document
+        .getElementById("countryCode")
+        .value
+        .trim()
+        .replace(/\s+/g,"");
+
+    const error =
+        document.getElementById("loginError");
+
+    if(!countryCodes[code]){
+
+        error.textContent =
+            "❌ کد کشور اشتباه است. لطفاً کد صحیح را وارد کنید.";
+
+        error.style.display="block";
+
+        document.getElementById("countryCard").style.display="none";
+        document.getElementById("equipmentCard").style.display="none";
+        document.getElementById("resultCard").style.display="none";
+
+        return;
+    }
+
+    error.style.display="none";
+
+    selectedCode=code;
+    selectedCountry=countryCodes[code];
+
+    document.getElementById("countryWelcome").innerHTML =
+        `🇺🇳 کشور شما: <strong>${selectedCountry}</strong><br>
+        کد اختصاصی: <strong>${selectedCode}</strong>`;
+
+    document.getElementById("countryCard").style.display="block";
+
+    document.getElementById("equipmentCard").style.display="none";
+
+    document.getElementById("resultCard").style.display="none";
+
+    document
+        .getElementById("countryCard")
+        .scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+}
+
+
+/* نمایش تجهیزات */
+
+function showEquipment(){
+
+    createEquipmentList();
+
+    document.getElementById("equipmentCard").style.display="block";
+
+    document.getElementById("resultCard").style.display="none";
+
+    document
+        .getElementById("equipmentCard")
+        .scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+}
+
+
+/* ساخت لیست */
+
+function createEquipmentList(){
+
+    const container =
+        document.getElementById("equipmentContainer");
+
+    container.innerHTML="";
+
+    let categoryIndex=0;
+
+    for(const category in equipmentData){
+
+        const box=document.createElement("div");
+
+        box.className="category";
+
+        box.innerHTML=
+            `<div class="category-title">${category}</div>`;
+
+        equipmentData[category].forEach((item,index)=>{
+
+            const name=item[0];
+            const price=item[1];
+            const income=item[2];
+
+            const id=
+                "eq_"+categoryIndex+"_"+index;
+
+            const row=document.createElement("div");
+
+            row.className="item";
+
+            row.innerHTML=`
+
+                <div class="info">
+
+                    <span class="name">
+                        ${name}
+                    </span>
+
+                    <span class="price">
+                        قیمت: ${formatMoney(price)}
+
+                        ${
+                            income>0
+                            ?
+                            " | درآمد روزانه: "+formatMoney(income)
+                            :
+                            ""
+                        }
+
+                    </span>
+
+                </div>
+
+                <input
+                    id="${id}"
+                    class="qty"
+                    type="number"
+                    min="0"
+                    value="0"
+                    data-name="${name}"
+                    data-price="${price}"
+                    data-income="${income}"
+                    data-category="${category}"
+                    data-id="${id}"
+                >
+
+            `;
+
+            box.appendChild(row);
+
+        });
+
+        container.appendChild(box);
+
+        categoryIndex++;
+
+    }
 
 }
 
 
-function showCountryModal(){
+/* محدود کردن درآمدزا */
 
-    document.getElementById("countryModal").style.display="flex";
+function limitIncome(input){
+
+    const income =
+        Number(input.dataset.income);
+
+    if(income>0 && Number(input.value)>10){
+
+        input.value=10;
+
+    }
+
+    if(Number(input.value)<0){
+
+        input.value=0;
+
+    }
+}
+
+
+/* ثبت خرید */
+
+function calculatePurchase(){
+
+    if(!selectedCountry){
+
+        alert("ابتدا کد کشور خود را وارد کنید.");
+
+        return;
+    }
+
+    const inputs =
+        document.querySelectorAll(
+            "#equipmentContainer input.qty"
+        );
+
+    let total=0;
+    let dailyIncome=0;
+    let lines=[];
+
+    inputs.forEach(input=>{
+
+        const qty=
+            Math.max(0,Number(input.value)||0);
+
+        if(qty===0){
+            return;
+        }
+
+        const name=input.dataset.name;
+        const price=Number(input.dataset.price);
+        const income=Number(input.dataset.income);
+
+        if(income>0 && qty>10){
+
+            input.value=10;
+
+            return;
+        }
+
+        const cost=price*qty;
+
+        total+=cost;
+
+        dailyIncome+=income*qty;
+
+        lines.push(
+            `• ${name} × ${qty} = ${formatMoney(cost)}`
+        );
+
+    });
+
+
+    if(lines.length===0){
+
+        alert("⚠️ حداقل یک تجهیز را با تعداد بیشتر از صفر انتخاب کنید.");
+
+        return;
+    }
+
+
+    let text=
+`🌎 درخواست خرید تجهیزات
+━━━━━━━━━━━━━━━━━━
+کشور: ${selectedCountry}
+کد کشور: ${selectedCode}
+
+🛒 تجهیزات انتخاب‌شده:
+
+${lines.join("\n")}
+
+━━━━━━━━━━━━━━━━━━
+💰 مبلغ کل خرید: ${formatMoney(total)}
+📈 درآمد روزانه تجهیزات: ${formatMoney(dailyIncome)}
+
+⚔️ جنگ جهانی سوم
+📢 لطفاً این متن را برای ادمین تجهیزات ارسال کنید.`;
+
+
+    document.getElementById("copyText").value=text;
+
+    document.getElementById("resultCard").style.display="block";
+
+    document
+        .getElementById("resultCard")
+        .scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
 
 }
 
 
-function closeCountryModal(){
+/* فرمت پول */
 
-    document.getElementById("countryModal").style.display="none";
+function formatMoney(number){
+
+    number=Number(number)||0;
+
+    if(number>=1000000){
+
+        const value=
+            number/1000000;
+
+        return (
+            Number.isInteger(value)
+            ? value
+            : value.toFixed(2)
+        )+"M";
+
+    }
+
+    if(number>=1000){
+
+        const value=
+            number/1000;
+
+        return (
+            Number.isInteger(value)
+            ? value
+            : value.toFixed(2)
+        )+"K";
+
+    }
+
+    return number.toLocaleString("en-US");
 
 }
 
+
+/* کپی خرید */
+
+function copyPurchase(){
+
+    const text=
+        document.getElementById("copyText").value;
+
+    if(!text){
+        return;
+    }
+
+    if(navigator.clipboard){
+
+        navigator.clipboard.writeText(text)
+        .then(()=>{
+            alert("✅ متن خرید کپی شد.");
+        })
+        .catch(()=>{
+            fallbackCopy(text);
+        });
+
+    }else{
+
+        fallbackCopy(text);
+
+    }
+
+}
+
+
+/* کپی جایگزین */
+
+function fallbackCopy(text){
+
+    const area=
+        document.createElement("textarea");
+
+    area.value=text;
+
+    document.body.appendChild(area);
+
+    area.select();
+
+    document.execCommand("copy");
+
+    area.remove();
+
+    alert("✅ متن خرید کپی شد.");
+
+}
+
+
+/* ادمین */
+
+function showAdmin(){
+
+    const box=
+        document.getElementById("adminBox");
+
+    box.style.display =
+        box.style.display==="none"
+        ? "block"
+        : "none";
+
+}
+
+
+/* جستجوی کشور */
 
 function filterCountries(){
 
-    const search =
+    const value=
         document
         .getElementById("countrySearch")
         .value
         .trim()
         .toLowerCase();
 
-    const countries =
-        document.querySelectorAll(".country");
+    document
+        .querySelectorAll(".country")
+        .forEach(country=>{
 
-    countries.forEach(function(country){
+            const text=
+                country.textContent.toLowerCase();
 
-        const text =
-            country.textContent.toLowerCase();
+            country.style.display =
+                text.includes(value)
+                ? ""
+                : "none";
 
-        if(text.includes(search)){
-
-            country.style.display="block";
-
-        }else{
-
-            country.style.display="none";
-
-        }
-
-    });
+        });
 
 }
 
 
-/* بستن پنجره با کلیک بیرون */
+/* باز و بسته شدن کشور */
 
 document
-.getElementById("countryModal")
-.addEventListener("click",function(event){
+    .querySelectorAll(".country")
+    .forEach(country=>{
 
-    if(event.target===this){
+        country.addEventListener("click",()=>{
 
-        closeCountryModal();
+            country.classList.toggle("open");
+
+        });
+
+    });
+
+
+/* کپی لینک سایت */
+
+function copyInvite(){
+
+    const url=window.location.href;
+
+    if(navigator.clipboard){
+
+        navigator.clipboard.writeText(url)
+        .then(()=>{
+            alert("✅ لینک سایت کپی شد.");
+        });
+
+    }else{
+
+        fallbackCopy(url);
 
     }
 
-});
+}
+
+
+/* ورود به سایت */
+
+function enterSite(){
+
+    const overlay=
+        document.getElementById("welcomeOverlay");
+
+    overlay.classList.add("hide");
+
+    setTimeout(()=>{
+
+        overlay.style.display="none";
+
+    },500);
+
+}
 
 </script>
 
 </body>
-</html>
+    </html>
