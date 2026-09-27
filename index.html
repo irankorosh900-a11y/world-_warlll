@@ -246,6 +246,12 @@ a{
     display:block;
 }
 
+.health-info{
+    margin-top:6px;
+    color:#7ee7a8;
+    font-weight:800;
+}
+
 /* تجهیزات */
 
 #equipmentSection{
@@ -435,7 +441,8 @@ footer{
         </h1>
 
         <p>
-            به فصل ششم بازی خوش. آماده کسب تجربه یک رهبر را دارید؟     </p>
+            به فصل ششم بازی خوش آمدید
+        </p>
 
         <button
             class="primary"
@@ -908,9 +915,6 @@ footer{
                 <div class="country-details">کد تجهیزات: 7628</div>
             </div>
 
-
-            <!-- کشورهای / گروه‌های جدید -->
-
             <div class="country">
                 <span class="country-name">☭ اتحاد جماهیر شوروی</span>
                 <div class="country-details">کد تجهیزات: 7195</div>
@@ -944,6 +948,11 @@ footer{
             <div class="country">
                 <span class="country-name">🟢 حماس</span>
                 <div class="country-details">کد تجهیزات: 8263</div>
+            </div>
+
+            <div class="country">
+                <span class="country-name">🇮🇶 عراق</span>
+                <div class="country-details">کد تجهیزات: 6835</div>
             </div>
 
         </div>
@@ -1199,8 +1208,6 @@ const countryCodes = {
     "4961":"🇦🇺 استرالیا",
     "7628":"🇳🇿 نیوزیلند",
 
-    /* کدهای جدید */
-
     "7195":"☭ اتحاد جماهیر شوروی",
     "3468":"🇩🇪 آلمان نازی",
 
@@ -1208,7 +1215,9 @@ const countryCodes = {
     "2751":"🔵 موساد",
     "6384":"🟠 حشد الشعبی",
     "4917":"🇺🇸 سنتکام",
-    "8263":"🟢 حماس"
+    "8263":"🟢 حماس",
+
+    "6835":"🇮🇶 عراق"
 
 };
 
@@ -1417,7 +1426,8 @@ function loginCountry(){
 
     document.getElementById("countryWelcome").innerHTML =
         `🇺🇳 کشور شما: <strong>${selectedCountry}</strong><br>
-        کد اختصاصی: <strong>${selectedCode}</strong>`;
+        کد اختصاصی: <strong>${selectedCode}</strong><br>
+        <span class="health-info">❤️ سلامت: <strong>200 HP</strong></span>`;
 
 
     document.getElementById("countryCard").style.display = "block";
@@ -1692,6 +1702,7 @@ function calculatePurchase(){
 
 کشور: ${selectedCountry}
 کد کشور: ${selectedCode}
+❤️ سلامت: 200 HP
 
 🛒 تجهیزات
 
