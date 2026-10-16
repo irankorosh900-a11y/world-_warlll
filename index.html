@@ -1,440 +1,810 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>جنگ جهانی سوم | فصل ۷</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;color:#fff;font-family:Tahoma,Arial,sans-serif;
+ background:radial-gradient(ellipse at top,#19415b,#071725 55%,#030911);
+ background-attachment:fixed
+}
+.wrap{max-width:1100px;margin:auto;padding:14px}
+.card{
+ background:linear-gradient(145deg,#0b1c2bf5,#10283af5);
+ border:1px solid #315572;border-radius:16px;padding:18px;
+ margin:14px 0;box-shadow:0 8px 24px #0005
+}
+h1,h2,h3{margin-top:0}
+button,.btn{
+ background:linear-gradient(135deg,#1976d2,#15518a);
+ color:white;border:1px solid #4786b5;border-radius:10px;
+ padding:11px 15px;margin:4px;font-weight:bold;
+ cursor:pointer;text-decoration:none;display:inline-block;
+ font-family:inherit;font-size:14px
+}
+button.secondary,.btn.secondary{background:#294052}
+button.success{background:#168653}
+button.warn{background:#94651a}
+button.danger{background:#8d2d2d}
+input,textarea,select{
+ width:100%;background:#06131f;color:white;
+ border:1px solid #355b76;border-radius:10px;
+ padding:12px;margin:7px 0 12px;font-family:inherit
+}
+textarea{min-height:110px;resize:vertical}
+.center{text-align:center}
+.hidden{display:none!important}
+.small{color:#9eb2c2;font-size:13px}
+.msg{padding:12px;border-radius:10px;background:#14334b;margin:10px 0}
+.err{background:#4a1d1d}
+.ok{background:#154a34}
+nav{display:flex;flex-wrap:wrap;gap:5px}
+nav button{flex:1;min-width:110px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px}
+.item{background:#0a1927;border:1px solid #294c66;border-radius:12px;padding:14px}
+.flag{font-size:42px}
+.rule{background:#091724;border-right:3px solid #1976d2;padding:12px;margin:9px 0;border-radius:9px}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#020a11;padding:14px;border-radius:10px;line-height:1.8}
+.badge{display:inline-block;padding:5px 9px;border-radius:20px;background:#14334b;margin:3px}
+.hero{
+ padding:30px 18px;
+ background:linear-gradient(145deg,#071727f5,#12324bf5);
+ border:1px solid #d4aa50
+}
+.hero h1{font-size:clamp(26px,5vw,42px)}
+.gold{color:#f4c76a}
+.main-link{
+ display:block;max-width:360px;margin:20px auto;
+ font-size:19px;padding:16px 22px;
+ background:linear-gradient(135deg,#b72d24,#e0a52f);
+ border:1px solid #f4c76a
+}
+footer{text-align:center;padding:20px;color:#8fa6b7}
+.order-line{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:8px;border-bottom:1px solid #294c66}
+@media(max-width:500px){
+ .wrap{padding:8px}
+ .card{padding:13px}
+ nav button{min-width:90px}
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
 
-<html lang="fa" dir="rtl">  
-<head>  
-<meta charset="UTF-8">  
-<meta name="viewport" content="width=device-width,initial-scale=1">  
-<title>جنگ جهانی سوم | فصل ۶</title>  
-<style>  
-*{box-sizing:border-box}  
-body{margin:0;background:#06111d;color:#fff;font-family:Tahoma,Arial,sans-serif}  
-.wrap{max-width:1050px;margin:auto;padding:16px}  
-.card{background:#0b1c2b;border:1px solid #315572;border-radius:16px;padding:18px;margin:14px 0;box-shadow:0 8px 24px #0003}  
-h1,h2,h3{margin-top:0}  
-button,.btn{background:#1976d2;color:#fff;border:0;border-radius:10px;padding:11px 15px;margin:4px;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}  
-button.secondary,.btn.secondary{background:#294052}  
-button.success{background:#168653}  
-button.warn{background:#9b6818}  
-button.danger{background:#8d2d2d}  
-input,textarea,select{width:100%;box-sizing:border-box;background:#06131f;color:#fff;border:1px solid #355b76;border-radius:10px;padding:12px;margin:7px 0 12px}  
-textarea{min-height:120px;resize:vertical}  
-.center{text-align:center}.hidden{display:none!important}.small{color:#9eb2c2;font-size:13px}  
-.msg{padding:12px;border-radius:10px;background:#14334b;margin:10px 0}.err{background:#4a1d1d}.ok{background:#154a34}  
-nav{display:flex;flex-wrap:wrap;gap:5px}nav button{flex:1;min-width:120px}  
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}  
-.item{background:#0a1927;border:1px solid #294c66;border-radius:12px;padding:14px}  
-.flag{font-size:42px}  
-.list{line-height:2}  
-.rule{background:#091724;border-right:3px solid #1976d2;padding:12px;margin:9px 0;border-radius:9px}  
-pre{white-space:pre-wrap;background:#020a11;padding:16px;border-radius:10px;line-height:1.8;overflow:auto}  
-table{width:100%;border-collapse:collapse}th,td{padding:10px;border-bottom:1px solid #294c66;text-align:right}  
-.badge{display:inline-block;padding:5px 9px;border-radius:20px;background:#14334b;margin:3px}  
-.search{margin-bottom:12px}  
-footer{padding:20px;text-align:center;color:#8fa6b7}  
-</style>  
-</head>  
-<body>  
-<div id="root"></div>  
-<script>  
-"use strict";  const COUNTRIES=[
-["🇮🇷","ایران","8090","مسعود پزشکیان","تهران"],["🇨🇳","چین","2147","مدیریت کشور","پکن"],
-["🇯🇵","ژاپن","5831","مدیریت کشور","توکیو"],["🇰🇵","کره شمالی","7264","مدیریت کشور","پیونگ‌یانگ"],
-["🇰🇷","کره جنوبی","3918","مدیریت کشور","سئول"],["🇮🇳","هند","6452","مدیریت کشور","دهلی نو"],
-["🇷🇺","روسیه","9073","مدیریت کشور","مسکو"],["🇸🇦","عربستان سعودی","4186","مدیریت کشور","ریاض"],
-["🇹🇷","ترکیه","5329","مدیریت کشور","آنکارا"],["🇮🇱","اسرائیل","7615","مدیریت کشور","اورشلیم"],
-["🇵🇰","پاکستان","2843","مدیریت کشور","اسلام‌آباد"],["🇦🇫","افغانستان","6197","مدیریت کشور","کابل"],
-["🇰🇼","کویت","4508","مدیریت کشور","کویت"],["🇶🇦","قطر","8732","مدیریت کشور","دوحه"],
-["🇱🇧","لبنان","3265","مدیریت کشور","بیروت"],["🇾🇪","یمن","5940","مدیریت کشور","صنعا"],
-["🇴🇲","عمان","1478","مدیریت کشور","مسقط"],["🇲🇾","مالزی","6824","مدیریت کشور","کوالالامپور"],
-["🇵🇸","فلسطین","9351","مدیریت کشور","قدس"],["🇦🇿","آذربایجان","5076","مدیریت کشور","باکو"],
-["🇻🇳","ویتنام","3189","مدیریت کشور","هانوی"],["🇹🇼","تایوان","7542","مدیریت کشور","تایپه"],
-["🇫🇷","فرانسه","6295","مدیریت کشور","پاریس"],["🇬🇧","بریتانیا","4817","مدیریت کشور","لندن"],
-["🇩🇪","آلمان","8630","مدیریت کشور","برلین"],["🇪🇸","اسپانیا","2754","مدیریت کشور","مادرید"],
-["🇮🇹","ایتالیا","9146","مدیریت کشور","رم"],["🇭🇷","کرواسی","3502","مدیریت کشور","زاگرب"],
-["🇵🇹","پرتغال","7468","مدیریت کشور","لیسبون"],["🇧🇪","بلژیک","1925","مدیریت کشور","بروکسل"],
-["🇳🇴","نروژ","6381","مدیریت کشور","اسلو"],["🇨🇭","سوئیس","8247","مدیریت کشور","برن"],
-["🇩🇰","دانمارک","4163","مدیریت کشور","کپنهاگ"],["🇳🇱","هلند","5709","مدیریت کشور","آمستردام"],
-["🇺🇦","اوکراین","2836","مدیریت کشور","کی‌یف"],["🇺🇸","آمریکا","9514","مدیریت کشور","واشنگتن"],
-["🇨🇦","کانادا","3672","مدیریت کشور","اتاوا"],["🇲🇽","مکزیک","8053","کلودیا شینباوم","مکزیکوسیتی"],
-["🇧🇷","برزیل","6248","مدیریت کشور","برازیلیا"],["🇦🇷","آرژانتین","1397","خاویر میلی","بوینس‌آیرس"],
-["🇻🇪","ونزوئلا","4725","مدیریت کشور","کاراکاس"],["🇪🇬","مصر","7160","مدیریت کشور","قاهره"],
-["🇱🇾","لیبی","3584","مدیریت کشور","طرابلس"],["🇩🇿","الجزایر","9026","مدیریت کشور","الجزیره"],
-["🇲🇦","مراکش","5413","مدیریت کشور","رباط"],["🇿🇦","آفریقای جنوبی","6879","مدیریت کشور","پرتوریا"],
-["🇳🇬","نیجریه","2305","مدیریت کشور","آبوجا"],["🇪🇹","اتیوپی","8142","مدیریت کشور","آدیس‌آبابا"],
-["🇦🇺","استرالیا","4961","مدیریت کشور","کانبرا"],["🇳🇿","نیوزیلند","7628","مدیریت کشور","ولینگتون"],
-["☭","شوروی","7195","مدیریت شوروی","مسکو"],["☠️","آلمان نازی","3468","مدیریت","برلین"],
-["🪖","سپاه","1042","فرماندهی سپاه","تهران"],["🕵️","موساد","2751","مدیریت","تل‌آویو"],
-["🛡️","حشدالشعبی","6384","مدیریت","بغداد"],["🛡️","سنتکام","4917","فرماندهی سنتکام","تامپا"],
-["🟩","حماس","8263","مدیریت","غزه"],["🇮🇶","عراق","6835","مدیریت کشور","بغداد"],
+<script>
+"use strict";
+
+const CHANNEL="https://rubika.ir/woorld_warIII";
+const ASSETS="https://rubika.ir/daraei__world";
+
+const COUNTRIES=[
+["🇮🇷","ایران","8090","مسعود پزشکیان","تهران"],
+["🇨🇳","چین","2147","مدیریت کشور","پکن"],
+["🇯🇵","ژاپن","5831","مدیریت کشور","توکیو"],
+["🇰🇵","کره شمالی","7264","مدیریت کشور","پیونگ‌یانگ"],
+["🇰🇷","کره جنوبی","3918","مدیریت کشور","سئول"],
+["🇮🇳","هند","6452","مدیریت کشور","دهلی نو"],
+["🇷🇺","روسیه","9073","مدیریت کشور","مسکو"],
+["🇸🇦","عربستان سعودی","4186","مدیریت کشور","ریاض"],
+["🇹🇷","ترکیه","5329","مدیریت کشور","آنکارا"],
+["🇮🇱","اسرائیل","7615","مدیریت کشور","اورشلیم"],
+["🇵🇰","پاکستان","2843","مدیریت کشور","اسلام‌آباد"],
+["🇦🇫","افغانستان","6197","مدیریت کشور","کابل"],
+["🇰🇼","کویت","4508","مدیریت کشور","کویت"],
+["🇶🇦","قطر","8732","مدیریت کشور","دوحه"],
+["🇱🇧","لبنان","3265","مدیریت کشور","بیروت"],
+["🇾🇪","یمن","5940","مدیریت کشور","صنعا"],
+["🇴🇲","عمان","1478","مدیریت کشور","مسقط"],
+["🇲🇾","مالزی","6824","مدیریت کشور","کوالالامپور"],
+["🇵🇸","فلسطین","9351","مدیریت کشور","قدس"],
+["🇦🇿","آذربایجان","5076","مدیریت کشور","باکو"],
+["🇻🇳","ویتنام","3189","مدیریت کشور","هانوی"],
+["🇹🇼","تایوان","7542","مدیریت کشور","تایپه"],
+["🇫🇷","فرانسه","6295","مدیریت کشور","پاریس"],
+["🇬🇧","بریتانیا","4817","مدیریت کشور","لندن"],
+["🇩🇪","آلمان","8630","مدیریت کشور","برلین"],
+["🇪🇸","اسپانیا","2754","مدیریت کشور","مادرید"],
+["🇮🇹","ایتالیا","9146","مدیریت کشور","رم"],
+["🇭🇷","کرواسی","3502","مدیریت کشور","زاگرب"],
+["🇵🇹","پرتغال","7468","مدیریت کشور","لیسبون"],
+["🇧🇪","بلژیک","1925","مدیریت کشور","بروکسل"],
+["🇳🇴","نروژ","6381","مدیریت کشور","اسلو"],
+["🇨🇭","سوئیس","8247","مدیریت کشور","برن"],
+["🇩🇰","دانمارک","4163","مدیریت کشور","کپنهاگ"],
+["🇳🇱","هلند","5709","مدیریت کشور","آمستردام"],
+["🇺🇦","اوکراین","2836","مدیریت کشور","کی‌یف"],
+["🇺🇸","آمریکا","9514","مدیریت کشور","واشنگتن"],
+["🇨🇦","کانادا","3672","مدیریت کشور","اتاوا"],
+["🇲🇽","مکزیک","8053","کلودیا شینباوم","مکزیکوسیتی"],
+["🇧🇷","برزیل","6248","مدیریت کشور","برازیلیا"],
+["🇦🇷","آرژانتین","1397","خاویر میلی","بوینس‌آیرس"],
+["🇻🇪","ونزوئلا","4725","مدیریت کشور","کاراکاس"],
+["🇪🇬","مصر","7160","مدیریت کشور","قاهره"],
+["🇱🇾","لیبی","3584","مدیریت کشور","طرابلس"],
+["🇩🇿","الجزایر","9026","مدیریت کشور","الجزیره"],
+["🇲🇦","مراکش","5413","مدیریت کشور","رباط"],
+["🇿🇦","آفریقای جنوبی","6879","مدیریت کشور","پرتوریا"],
+["🇳🇬","نیجریه","2305","مدیریت کشور","آبوجا"],
+["🇪🇹","اتیوپی","8142","مدیریت کشور","آدیس‌آبابا"],
+["🇦🇺","استرالیا","4961","مدیریت کشور","کانبرا"],
+["🇳🇿","نیوزیلند","7628","مدیریت کشور","ولینگتون"],
+["☭","شوروی","7195","مدیریت شوروی","مسکو"],
+["☠️","آلمان نازی","3468","مدیریت","برلین"],
+["🪖","سپاه","1042","فرماندهی سپاه","تهران"],
+["🕵️","موساد","2751","مدیریت","تل‌آویو"],
+["🛡️","حشدالشعبی","6384","مدیریت","بغداد"],
+["🛡️","سنتکام","4917","فرماندهی سنتکام","تامپا"],
+["🟩","حماس","8263","مدیریت","غزه"],
+["🇮🇶","عراق","6835","مدیریت کشور","بغداد"],
 ["🟨","حزب‌الله","5726","مدیریت","بیروت"]
 ];
 
 const ITEMS=[
-{name:"کارخانه خودرو",category:"🏭 کارخانه‌ها و درآمدزا",price:1000000,income:500000,revenue:true},
-{name:"کارخانه کفش",category:"🏭 کارخانه‌ها و درآمدزا",price:600000,income:250000,revenue:true},
-{name:"کارخانه نوشابه",category:"🏭 کارخانه‌ها و درآمدزا",price:100000,income:20000,revenue:true},
-{name:"کارخانه شیرینی",category:"🏭 کارخانه‌ها و درآمدزا",price:150000,income:50000,revenue:true},
-{name:"کارخانه مس",category:"🏭 کارخانه‌ها و درآمدزا",price:650000,income:300000,revenue:true},
-{name:"مزرعه انگور",category:"🌾 مزارع و درآمدزا",price:800000,income:400000,revenue:true},
-{name:"مزرعه گوجه و خیار",category:"🌾 مزارع و درآمدزا",price:450000,income:220000,revenue:true},
-{name:"مزرعه سبزی",category:"🌾 مزارع و درآمدزا",price:250000,income:100000,revenue:true},
-{name:"مزرعه کاهو",category:"🌾 مزارع و درآمدزا",price:500000,income:250000,revenue:true},
-{name:"آپارتمان لوکس",category:"🏙️ ساختمان‌ها و زیرساخت",price:500000,income:0,revenue:false},
-{name:"آپارتمان معمولی",category:"🏙️ ساختمان‌ها و زیرساخت",price:250000,income:0,revenue:false},
-{name:"مدرسه",category:"🏙️ ساختمان‌ها و زیرساخت",price:500000,income:0,revenue:false},
-{name:"شهربازی",category:"🏙️ ساختمان‌ها و زیرساخت",price:500000,income:0,revenue:false},
-{name:"پل",category:"🏙️ ساختمان‌ها و زیرساخت",price:100000,income:0,revenue:false},
-{name:"سینما",category:"🏙️ ساختمان‌ها و زیرساخت",price:2000000,income:0,revenue:false},
-{name:"بیمارستان",category:"🏙️ ساختمان‌ها و زیرساخت",price:500000,income:0,revenue:false},
-{name:"رستوران",category:"🏙️ ساختمان‌ها و زیرساخت",price:100000,income:0,revenue:false},
-{name:"دانشگاه",category:"🏙️ ساختمان‌ها و زیرساخت",price:1000000,income:0,revenue:false},
-{name:"جاده‌سازی",category:"🏙️ ساختمان‌ها و زیرساخت",price:800000,income:0,revenue:false},
-{name:"نیروگاه خورشیدی",category:"🏙️ ساختمان‌ها و زیرساخت",price:70000000,income:0,revenue:false},
-{name:"سرباز",category:"🪖 تجهیزات زمینی",price:50000,income:0,revenue:false},
-{name:"نیروی ویژه",category:"🪖 تجهیزات زمینی",price:150000,income:0,revenue:false},
-{name:"تانک",category:"🪖 تجهیزات زمینی",price:500000,income:0,revenue:false},
-{name:"نفربر زرهی",category:"🪖 تجهیزات زمینی",price:350000,income:0,revenue:false},
-{name:"توپخانه",category:"🪖 تجهیزات زمینی",price:400000,income:0,revenue:false},
-{name:"سامانه پدافندی",category:"🪖 تجهیزات زمینی",price:800000,income:0,revenue:false},
-{name:"جنگنده",category:"✈️ تجهیزات هوایی",price:1000000,income:0,revenue:false},
-{name:"جنگنده پیشرفته",category:"✈️ تجهیزات هوایی",price:2000000,income:0,revenue:false},
-{name:"بمب‌افکن",category:"✈️ تجهیزات هوایی",price:2500000,income:0,revenue:false},
-{name:"هلیکوپتر",category:"✈️ تجهیزات هوایی",price:700000,income:0,revenue:false},
-{name:"هواپیمای ترابری",category:"✈️ تجهیزات هوایی",price:900000,income:0,revenue:false},
-{name:"پهپاد",category:"✈️ تجهیزات هوایی",price:300000,income:0,revenue:false},
-{name:"ناو جنگی",category:"🚢 تجهیزات دریایی",price:3000000,income:0,revenue:false},
-{name:"ناوشکن",category:"🚢 تجهیزات دریایی",price:5000000,income:0,revenue:false},
-{name:"زیردریایی",category:"🚢 تجهیزات دریایی",price:4500000,income:0,revenue:false},
-{name:"قایق تهاجمی",category:"🚢 تجهیزات دریایی",price:500000,income:0,revenue:false},
-{name:"ناو هواپیمابر",category:"🚢 تجهیزات دریایی",price:15000000,income:0,revenue:false},
-{name:"موشک",category:"🚀 موشکی",price:700000,income:0,revenue:false},
-{name:"موشک بالستیک",category:"🚀 موشکی",price:1500000,income:0,revenue:false},
-{name:"موشک کروز",category:"🚀 موشکی",price:1200000,income:0,revenue:false},
-{name:"پایگاه زمینی",category:"🏗️ پایگاه‌ها و فرودگاه‌ها",price:1000000,income:0,revenue:false},
-{name:"پایگاه هوایی",category:"🏗️ پایگاه‌ها و فرودگاه‌ها",price:2000000,income:0,revenue:false},
-{name:"پایگاه دریایی",category:"🏗️ پایگاه‌ها و فرودگاه‌ها",price:2000000,income:0,revenue:false},
-{name:"فرودگاه",category:"🏗️ پایگاه‌ها و فرودگاه‌ها",price:2000000,income:0,revenue:false}
-];
+["کارخانه خودرو","🏭 کارخانه‌ها و درآمدزا",1000000,500000,1],
+["کارخانه کفش","🏭 کارخانه‌ها و درآمدزا",600000,250000,1],
+["کارخانه نوشابه","🏭 کارخانه‌ها و درآمدزا",100000,20000,1],
+["کارخانه شیرینی","🏭 کارخانه‌ها و درآمدزا",150000,50000,1],
+["کارخانه مس","🏭 کارخانه‌ها و درآمدزا",650000,300000,1],
+["مزرعه انگور","🌾 مزارع و درآمدزا",800000,400000,1],
+["مزرعه گوجه و خیار","🌾 مزارع و درآمدزا",450000,220000,1],
+["مزرعه سبزی","🌾 مزارع و درآمدزا",250000,100000,1],
+["مزرعه کاهو","🌾 مزارع و درآمدزا",500000,250000,1],
+["آپارتمان لوکس","🏙️ ساختمان‌ها",500000,0,0],
+["آپارتمان معمولی","🏙️ ساختمان‌ها",250000,0,0],
+["مدرسه","🏙️ ساختمان‌ها",500000,0,0],
+["شهربازی","🏙️ ساختمان‌ها",500000,0,0],
+["پل","🏙️ ساختمان‌ها",100000,0,0],
+["سینما","🏙️ ساختمان‌ها",2000000,0,0],
+["بیمارستان","🏙️ ساختمان‌ها",500000,0,0],
+["رستوران","🏙️ ساختمان‌ها",100000,0,0],
+["دانشگاه","🏙️ ساختمان‌ها",1000000,0,0],
+["جاده‌سازی","🏙️ ساختمان‌ها",800000,0,0],
+["نیروگاه خورشیدی","🏙️ ساختمان‌ها",70000000,0,0],
+["سرباز","🪖 تجهیزات زمینی",50000,0,0],
+["نیروی ویژه","🪖 تجهیزات زمینی",150000,0,0],
+["تانک","🪖 تجهیزات زمینی",500000,0,0],
+["نفربر زرهی","🪖 تجهیزات زمینی",350000,0,0],
+["توپخانه","🪖 تجهیزات زمینی",400000,0,0],
+["سامانه پدافندی","🪖 تجهیزات زمینی",800000,0,0],
+["جنگنده","✈️ تجهیزات هوایی",1000000,0,0],
+["جنگنده پیشرفته","✈️ تجهیزات هوایی",2000000,0,0],
+["بمب‌افکن","✈️ تجهیزات هوایی",2500000,0,0],
+["هلیکوپتر","✈️ تجهیزات هوایی",700000,0,0],
+["هواپیمای ترابری","✈️ تجهیزات هوایی",900000,0,0],
+["پهپاد","✈️ تجهیزات هوایی",300000,0,0],
+["ناو جنگی","🚢 تجهیزات دریایی",3000000,0,0],
+["ناوشکن","🚢 تجهیزات دریایی",5000000,0,0],
+["زیردریایی","🚢 تجهیزات دریایی",4500000,0,0],
+["قایق تهاجمی","🚢 تجهیزات دریایی",500000,0,0],
+["ناو هواپیمابر","🚢 تجهیزات دریایی",15000000,0,0],
+["موشک","🚀 موشکی",700000,0,0],
+["موشک بالستیک","🚀 موشکی",1500000,0,0],
+["موشک کروز","🚀 موشکی",1200000,0,0],
+["پایگاه زمینی","🏗️ پایگاه‌ها",1000000,0,0],
+["پایگاه هوایی","🏗️ پایگاه‌ها",2000000,0,0],
+["پایگاه دریایی","🏗️ پایگاه‌ها",2000000,0,0],
+["فرودگاه","🏗️ پایگاه‌ها",2000000,0,0]
+].map(x=>({
+ name:x[0],category:x[1],price:x[2],
+ income:x[3],revenue:!!x[4]
+}));
 
-let current=null,target=null;
+let current=null,target=null,selectedItem=null,order=[];
 
 const $=id=>document.getElementById(id);
-const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&","<":"<",">":">",'"':""","'":"'"}[c]));
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({
+ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+}[c]));
 const money=n=>Number(n||0).toLocaleString("fa-IR");
-const countryLabel=c=>c?${c[0]} ${c[1]}:"";
-const targetNeeded=()=>{if(!target){alert("ابتدا کشور مقصد را انتخاب کنید.");return false}return true};
+const countryLabel=c=>c?`${c[0]} ${c[1]}`:"";
 
 function gate(){
-$("root").innerHTML=`<div class="wrap">
+ current=null;
+ target=null;
+ order=[];
 
-<div class="card center" style="padding:30px 18px;background:linear-gradient(145deg,#071727ee,#12324bee);border:1px solid #d4aa50">  
-<h1>🌍 جنگ جهانی سوم</h1><h2 style="color:#f4c76a">فصل جاری | ۶</h2>  
-<button id="showLogin" style="display:block;margin:22px auto;font-size:20px;padding:16px 32px;background:linear-gradient(135deg,#b72d24,#e0a52f);min-width:min(100%,320px)">🚀 ورود به بازی</button>  
-<div id="loginBox" class="hidden"><p>کد کشور خود را وارد کنید تا پنل همان کشور باز شود.</p><input id="code" inputmode="numeric" maxlength="4" placeholder="کد کشور"><button id="check">🔐 بررسی کد</button><div id="gateMsg"></div><div id="welcome" class="msg hidden"><b id="welcomeText"></b><br><button class="success" id="enter">ورود به پنل کشور</button></div></div>  
-</div>  
-<div class="card center"><h2>📡 کانال‌های رسمی</h2>  
-<a class="btn" href="https://rubika.ir/woorld_warIII" target="_blank" rel="noopener">🚀 کانال اصلی جنگ جهانی سوم</a>  
-<a class="btn secondary" href="https://rubika.ir/daraei__world" target="_blank" rel="noopener">💰 کانال دارایی</a>  
-</div>  
-<div class="card center"><h2>🏆 برندگان فصل‌های قبل</h2>  
-<div class="grid">  
-<div class="item">🏆 فصل ۴<br>🇮🇷 ایران</div>  
-<div class="item">🏆 فصل ۵<br>🇺🇸 آمریکا</div>  
-<div class="item">⚔️ فصل جاری<br>۶</div>  
-</div>  
-</div>  
-<div class="card"><h2>🌍 فهرست کشورها</h2>  
-<input id="homeCountrySearch" class="search" placeholder="جستجوی کشور...">  
-<div id="homeCountries" class="grid"></div>  
-</div>  
-<footer>جنگ جهانی سوم | فصل ۶</footer>  
-</div>`;  
-$("showLogin").onclick=()=>{$("loginBox").classList.toggle("hidden");$("code").focus()};  
-$("check").onclick=verifyCode;  
-$("code").onkeydown=e=>{if(e.key==="Enter")verifyCode()};  
-const drawHome=()=>{const q=($("homeCountrySearch").value||"").trim();$("homeCountries").innerHTML=COUNTRIES.filter(c=>!q||c[1].includes(q)).map(c=>`<div class="item center"><span class="flag">${esc(c[0])}</span><br>${esc(c[1])}</div>`).join("")};  
-$("homeCountrySearch").oninput=drawHome;drawHome();  
-}  
-function verifyCode(){  
-const found=COUNTRIES.find(x=>x[2]===$("code").value.trim());  
-if(!found){$("gateMsg").innerHTML=`<div class="msg err">❌ کد کشور اشتباه است.</div>`;$("welcome").classList.add("hidden");return}  
-current=found;$("gateMsg").innerHTML=`<div class="msg ok">✅ ${esc(countryLabel(found))} شناسایی شد.</div>`;  
-$("welcomeText").textContent=`به پنل ${countryLabel(found)} خوش آمدید`;  
-$("welcome").classList.remove("hidden");$("enter").onclick=()=>app("panel");  
-}  
-function app(page){  
-if(!current){gate();return}  
-$("root").innerHTML=`<div class="wrap">  
-<div class="card"><b>🌍 جنگ جهانی سوم | فصل ۶</b><span class="small"> | ${esc(countryLabel(current))}</span>  
-<nav>  
-<button data-page="panel">🌎 پنل کشور</button><button data-page="center" class="secondary">🏛️ مرکز</button>  
-<button data-page="rules" class="secondary">📜 قوانین</button><button data-page="tutorial" class="secondary">🎓 آموزش</button>  
-<button data-page="docs" class="secondary">📄 مرکز اسناد</button><button data-page="shop" class="success">🛒 تجهیزات</button>  
-<button data-page="custom" class="warn">🎨 شخصی‌سازی کارت</button><button id="logout" class="danger">🔐 خروج</button>  
-</nav></div><main id="main"></main>  
-<footer>━━━━━━━━━━━━━━━━━━━━<br>🆔 @woorld_warIII<br>👑 مالک: مدیریت جنگ جهانی سوم<br>━━━━━━━━━━━━━━━━━━━━</footer></div>`;  
-document.querySelectorAll("[data-page]").forEach(b=>b.onclick=()=>render(b.dataset.page));  
-$("logout").onclick=()=>{current=null;target=null;gate()};  
-render(page);  
-}  
-function render(page){  
-({panel,center,rules,tutorial,docs,shop,custom}[page]||panel)();  
-if(page!=="panel"){const main=$("main");if(main)main.insertAdjacentHTML("afterbegin",`<button class="secondary" id="backPanel">⬅️ بازگشت به پنل کشور</button>`);const back=$("backPanel");if(back)back.onclick=()=>render("panel");}  
-}  
-function panel(){  
-$("main").innerHTML=`<div class="card center"><div class="flag">${esc(current[0])}</div><h1>پنل کشور ${esc(current[1])}</h1><p>👑 ${esc(current[3])} &nbsp; | &nbsp; 🏛️ ${esc(current[4])}</p></div>  
-<div class="grid"><div class="item center">❤️ سلامت<br><b>200</b></div><div class="item center">💰 دارایی<br><b>در کانال دارایی</b></div><div class="item center">📈 درآمد روزانه<br><b>در کانال دارایی</b></div></div>  
-<div class="card center"><h2>⚙️ امکانات پنل کشور</h2><p class="small">برای باز کردن هر بخش، گزینه مربوطه را انتخاب کنید.</p><div class="grid">  
-<button data-page="shop" class="success">🛒 خرید تجهیزات</button><button data-page="rules" class="secondary">📜 قوانین بازی</button><button data-page="tutorial" class="secondary">🎓 آموزش بازی</button><button data-page="docs" class="secondary">📄 مرکز اسناد و بیانیه‌ها</button><button data-page="custom" class="warn">🎨 شخصی‌سازی کارت</button><button data-page="center" class="secondary">🏛️ مرکز اطلاعات</button></div></div>`;  
-bindLocalNav();  
-}  
-function bindLocalNav(){document.querySelectorAll("#main [data-page]").forEach(b=>b.onclick=()=>render(b.dataset.page))}  
-function center(){  
-$("main").innerHTML=`<div class="card center"><h1>🏛️ مرکز جنگ جهانی سوم</h1><p>مرکز دسترسی به قوانین، آموزش، اسناد و امکانات بازی.</p>  
-<button data-page="rules">📜 قوانین بازی</button><button data-page="tutorial">🎓 آموزش بازی</button><button data-page="docs">📄 مرکز اسناد</button><button data-page="shop">🛒 تجهیزات</button></div>  
-<div class="card"><h2>🏆 برندگان فصل‌های قبل</h2><div class="grid"><div class="item center">فصل ۴<br>🇮🇷 ایران</div><div class="item center">فصل ۵<br>🇺🇸 آمریکا</div></div></div>  
-<div class="card"><h2>🌎 کشورهای بازی</h2><input class="search" id="countrySearch" placeholder="جستجوی کشور..."><div id="countryList" class="grid"></div></div>`;  
-const list=$("countryList");  
-function draw(){const q=($("countrySearch").value||"").trim();list.innerHTML=COUNTRIES.filter(c=>!q||c[1].includes(q)).map(c=>`<div class="item center"><span class="flag">${esc(c[0])}</span><br>${esc(c[1])}</div>`).join("")}  
-$("countrySearch").oninput=draw;draw();bindLocalNav();  
-}  
-function rules(){  
-$("main").innerHTML=`<div class="card"><h1>📜 قوانین کامل بازی</h1>  
-<div class="rule"><b>۱. ورود و ثبت کشور</b><br>هر بازیکن باید با کد اختصاصی کشور خود وارد شود و اطلاعات کشور را صحیح استفاده کند.</div>  
-<div class="rule"><b>۲. خرید و تجهیزات</b><br>قیمت و درآمد هر مورد طبق فهرست رسمی بازی محاسبه می‌شود. <b>فقط تجهیزات درآمدزا حداکثر ۱۰ عدد قابل خرید هستند.</b> برای تجهیزات غیر درآمدزا محدودیت ۱۰ عدد وجود ندارد.</div>  
-<div class="rule"><b>۳. ثبت سفارش تجهیزات</b><br>پس از تکمیل خرید، کارت نهایی سفارش ساخته می‌شود. بازیکن باید کارت را برای ادمین‌های خرید تجهیزات که در کانال اصلی بازی پین شده‌اند ارسال کند تا ادمین آن را بررسی و ثبت کند.</div>  
-<div class="rule"><b>۴. دوئل</b><br>دوئل هر ۳ روز یک‌بار برای هر کشور مجاز است. کشور آغازکننده ۳٪ رضایت مردمی از دست می‌دهد. مهلت دفاع ۱۰ دقیقه است. برنده طبق قوانین بازی تجهیزات تعیین‌شده کشور بازنده را دریافت می‌کند.</div>  
-<div class="rule"><b>۵. جنگ اتحادی</b><br>هر اتحاد شامل ۱ رهبر و حداکثر ۴ عضو است. شروع جنگ اتحادی نیازمند تأیید رهبران دو اتحاد است. اعضای اتحاد حق دخالت یا کمک در دوئل را ندارند. جنگ اتحادی باید به‌صورت رسمی ثبت شود.</div>  
-<div class="rule"><b>۶. گزارش نبرد</b><br>شروع و نتیجه جنگ باید با کارت/گزارش مربوطه ثبت شود. تجهیزات مصرف‌شده یا نابودشده طبق قوانین بازی از موجودی کسر می‌شوند.</div>  
-<div class="rule"><b>۷. تجارت</b><br>تجارت باید با سند تجاری ثبت شود و پس از تأیید طرفین معتبر است. تجارت باعث افزایش رضایت مردمی می‌شود.</div>  
-<div class="rule"><b>۸. قرارداد</b><br>قراردادهای وام، فروش تجهیزات و توافق‌های دیگر باید با سند قرارداد و تأیید طرفین ثبت شوند.</div>  
-<div class="rule"><b>۹. صلح</b><br>صلح باید با سند صلح ثبت شود و مفاد آن برای طرفین معتبر است.</div>  
-<div class="rule"><b>۱۰. بیانیه</b><br>بیانیه‌های رسمی باید از کارت بیانیه استفاده کنند و وضعیت آن مشخص باشد.</div>  
-<div class="rule"><b>۱۱. امانت‌داری</b><br>ثبت جعلی تجهیزات، پول، درآمد، نتیجه جنگ یا اطلاعات کشور ممنوع است.</div>  
-<div class="rule"><b>۱۲. ادمین‌ها</b><br>ثبت نهایی خریدها، درآمدها و تجهیزات بر عهده ادمین‌های مربوطه است و اطلاعات باید دقیق و بدون دستکاری ثبت شود.</div>  
-<div class="rule"><b>۱۳. تخلف</b><br>هرگونه تقلب، سوءاستفاده از باگ یا جعل اطلاعات می‌تواند طبق تصمیم مدیریت با برخورد مدیریتی همراه شود.</div>  
-</div>`}  
-function tutorial(){  
-$("main").innerHTML=`<div class="card"><h1>🎓 آموزش کامل بازی</h1>  
-<div class="rule"><b>گام ۱ | ورود</b><br>کد کشور را وارد کنید و وارد پنل کشور شوید.</div>  
-<div class="rule"><b>گام ۲ | پنل کشور</b><br>در پنل، کشور، رهبر، پایتخت، سلامت و دسترسی به دارایی، درآمد و تجهیزات را مشاهده می‌کنید.</div>  
-<div class="rule"><b>گام ۳ | اقتصاد</b><br>قیمت و درآمد روزانه موارد درآمدزا را بررسی کنید. دارایی و درآمد رسمی از کانال دارایی پیگیری می‌شود.</div>  
-<div class="rule"><b>گام ۴ | خرید تجهیزات</b><br>مورد و تعداد را انتخاب کنید. قیمت کل و درآمد روزانه کل خودکار محاسبه می‌شود. فقط مورد درآمدزا سقف ۱۰ عدد دارد.</div>  
-<div class="rule"><b>گام ۵ | ارسال سفارش</b><br>کارت نهایی را کپی کنید و برای ادمین خرید تجهیزات که در کانال اصلی پین شده ارسال کنید تا ثبت شود.</div>  
-<div class="rule"><b>گام ۶ | دوئل</b><br>کشور مقابل را انتخاب کنید، شرایط دوئل را رعایت کنید و نتیجه را با گزارش نبرد ثبت کنید. فاصله دوئل‌ها ۳ روز و زمان دفاع ۱۰ دقیقه است.</div>  
-<div class="rule"><b>گام ۷ | جنگ اتحادی</b><br>اتحادها طبق ساختار رهبر و اعضا فعالیت می‌کنند و جنگ اتحادی با تأیید رهبران دو طرف شروع می‌شود.</div>  
-<div class="rule"><b>گام ۸ | اسناد</b><br>برای جنگ، تجارت، قرارداد، صلح و بیانیه از مرکز اسناد استفاده کنید.</div>  
-</div>`}  
-function docs(){  
-$("main").innerHTML=`<div class="card"><h1>📄 مرکز اسناد</h1><p class="small">هر سند را باز کنید، اطلاعات را کامل کنید و کارت نهایی را کپی کنید.</p>  
-<button data-doc="battle">⚔️ گزارش نبرد</button><button data-doc="trade">📋 سند تجاری</button><button data-doc="contract">📜 قرارداد</button><button data-doc="peace">🕊️ صلح</button><button data-doc="statement">⚠️ بیانیه</button></div><div id="docArea"></div>`;  
-document.querySelectorAll("[data-doc]").forEach(b=>b.onclick=()=>docForm(b.dataset.doc));  
-}  
-function targetPicker(){  
-return `<label>کشور مقصد</label><input id="targetSearch" placeholder="نام کشور مقصد را جستجو کنید"><div id="targets" class="grid"></div>`;  
-}  
-function docForm(type){  
-let title={battle:"⚔️ گزارش نبرد",trade:"📋 سند تجاری",contract:"📜 سند قرارداد",peace:"🕊️ سند صلح",statement:"⚠️ بیانیه"}[type];  
-let extra="";  
-if(type==="statement")extra=`<label>متن بیانیه</label><textarea id="statementText" placeholder="متن بیانیه را وارد کنید..."></textarea>`;  
-else extra=targetPicker()+formFields(type);  
-$("docArea").innerHTML=`<div class="card"><h2>${title}</h2>${extra}<button class="success" id="makeDoc">📝 ساخت کارت</button></div><div id="docResult"></div>`;  
-if(type!=="statement")bindTargets();  
-$("makeDoc").onclick=()=>makeDoc(type);  
-}  
-function formFields(type){  
-if(type==="battle")return `<label>نام عملیات</label><input id="operation" placeholder="نام عملیات"><label>تجهیزات استفاده‌شده</label><textarea id="eq" placeholder="تجهیزات..."></textarea><label>خسارات وارده</label><textarea id="damage"></textarea><label>غنائم جنگی</label><input id="loot">`;  
-if(type==="trade")return `<label>تجهیزات</label><input id="eq"><label>تعداد</label><input id="qty" type="number" min="1"><label>قیمت مجموع</label><input id="price">`;  
-if(type==="contract")return `<label>مورد تحویل</label><textarea id="delivery"></textarea><label>در مقابل دریافت</label><textarea id="receive"></textarea><label>شروط قرارداد</label><textarea id="terms"></textarea><label>مدت قرارداد</label><input id="duration">`;  
-return `<label>تاریخ صدور</label><input id="issue"><label>تاریخ انقضا</label><input id="expire"><label>محل امضای صلح</label><input id="place">`;  
-}  
-function bindTargets(){  
-target=null;  
-const draw=()=>{const q=($("targetSearch").value||"").trim();$("targets").innerHTML=COUNTRIES.filter(c=>c!==current&&(!q||c[1].includes(q))).map((c,i)=>`<button class="item" data-ti="${COUNTRIES.indexOf(c)}">${esc(c[0])} ${esc(c[1])}</button>`).join("")};  
-$("targetSearch").oninput=draw;draw();  
-$("targets").onclick=e=>{const b=e.target.closest("[data-ti]");if(!b)return;target=COUNTRIES[Number(b.dataset.ti)];document.querySelectorAll("#targets button").forEach(x=>x.classList.remove("success"));b.classList.add("success")};  
-}  
-function makeDoc(type){  
-if(type!=="statement"&&!targetNeeded())return;  
-let text="";  
-if(type==="statement"){  
-text=`━━━━━━━━━━━━━━━━━━━━━━  
-⚠️ 𝗖𝗟𝗔𝗦𝗦𝗜𝗙𝗜𝗘𝗗 𝗗𝗢𝗖𝗨𝗠𝗘𝗡𝗧 ⚠️  
-━━━━━━━━━━━━━━━━━━━━━━  
-🔹 صادرکننده:  
-➲ ${esc(current[3])}  
-🔹 محل صدور:  
-➲ ${current[4]}  
-🔹 متن بیانیه:  
-➲ ${$("statementText").value.trim()}  
-━━━━━━━━━━━━━━━━━━━━━━  
-🆔 @woorld_warIII  
-[ 🚩 وضعیت: عملیاتی ]`;  
-}else if(type==="battle"){  
-text=`⚔️ 𝐁𝐀𝐓𝐓𝐋𝐄 𝐑𝐄𝐏𝐎𝐑𝐓 | گزارش نبرد  
-━━━━━━━━━━━━━━━━━━━━━━  
-🎯 𝐎𝐏𝐄𝐑𝐀𝐓𝐈𝐎𝐍 | عملیات:  
-${$("operation").value.trim()}  🚩 مهاجم: ${countryLabel(current)}
+ $("root").innerHTML=`
+ <div class="wrap">
+  <div class="card hero center">
+   <h1>🌍 جنگ جهانی سوم</h1>
+   <h2 class="gold">فصل جاری | ۷</h2>
+
+   <a class="btn main-link" href="${CHANNEL}" target="_blank" rel="noopener">
+    🚀 ورود به کانال اصلی بازی
+   </a>
+
+   <button id="showLogin">🔐 ورود به پنل کشور</button>
+
+   <div id="loginBox" class="hidden">
+    <p>کد کشور خود را وارد کنید.</p>
+    <input id="code" inputmode="numeric" maxlength="4" placeholder="کد کشور">
+    <button id="check">بررسی کد</button>
+    <div id="gateMsg"></div>
+    <div id="welcome" class="msg hidden">
+     <b id="welcomeText"></b><br>
+     <button class="success" id="enter">ورود به پنل کشور</button>
+    </div>
+   </div>
+  </div>
+
+  <div class="card center">
+   <h2>📡 کانال‌های رسمی</h2>
+   <a class="btn" href="${CHANNEL}" target="_blank" rel="noopener">🚀 کانال اصلی جنگ جهانی سوم</a>
+   <a class="btn secondary" href="${ASSETS}" target="_blank" rel="noopener">💰 کانال دارایی</a>
+  </div>
+
+  <div class="card center">
+   <h2>🏆 قهرمانان فصل‌های قبل</h2>
+   <div class="grid">
+    <div class="item"><div class="flag">🇺🇸</div><h3>فصل ۴</h3><p>قهرمان: آمریکا</p></div>
+    <div class="item"><div class="flag">🇮🇷</div><h3>فصل ۵</h3><p>قهرمان: ایران</p></div>
+    <div class="item"><div class="flag">🪖</div><h3>فصل ۶</h3><p>قهرمان: سپاه</p></div>
+    <div class="item" style="border-color:#d4aa50">
+     <div class="flag">⚔️</div><h3 class="gold">فصل جاری: ۷</h3>
+     <p>قهرمان هنوز مشخص نشده است.</p>
+    </div>
+   </div>
+  </div>
+
+  <div class="card">
+   <h2>🌍 فهرست کشورها</h2>
+   <input id="homeCountrySearch" placeholder="جستجوی کشور...">
+   <div id="homeCountries" class="grid"></div>
+  </div>
+
+  <footer>🆔 @woorld_warIII<br>جنگ جهانی سوم | فصل ۷</footer>
+ </div>`;
+
+ $("showLogin").onclick=()=>{
+  $("loginBox").classList.toggle("hidden");
+  if(!$("loginBox").classList.contains("hidden"))$("code").focus();
+ };
+ $("check").onclick=verifyCode;
+ $("code").onkeydown=e=>{if(e.key==="Enter")verifyCode()};
+
+ function drawHome(){
+  const q=$("homeCountrySearch").value.trim();
+  $("homeCountries").innerHTML=COUNTRIES
+   .filter(c=>!q||c[1].includes(q))
+   .map(c=>`<div class="item center"><span class="flag">${esc(c[0])}</span><br>${esc(c[1])}</div>`).join("");
+ }
+ $("homeCountrySearch").oninput=drawHome;
+ drawHome();
+}
+
+function verifyCode(){
+ const found=COUNTRIES.find(x=>x[2]===$("code").value.trim());
+ if(!found){
+  $("gateMsg").innerHTML='<div class="msg err">❌ کد کشور اشتباه است.</div>';
+  $("welcome").classList.add("hidden");
+  return;
+ }
+ current=found;
+ $("gateMsg").innerHTML=`<div class="msg ok">✅ ${esc(countryLabel(found))} شناسایی شد.</div>`;
+ $("welcomeText").textContent=`به پنل ${countryLabel(found)} خوش آمدید`;
+ $("welcome").classList.remove("hidden");
+ $("enter").onclick=()=>{order=[];app("panel")};
+}
+
+function app(page){
+ if(!current){gate();return}
+ $("root").innerHTML=`
+ <div class="wrap">
+  <div class="card">
+   <b>🌍 جنگ جهانی سوم | فصل ۷</b>
+   <span class="small"> | ${esc(countryLabel(current))}</span>
+   <nav>
+    <button data-page="panel">🌎 پنل کشور</button>
+    <button data-page="center" class="secondary">🏛️ مرکز</button>
+    <button data-page="rules" class="secondary">📜 قوانین</button>
+    <button data-page="tutorial" class="secondary">🎓 آموزش</button>
+    <button data-page="docs" class="secondary">📄 اسناد</button>
+    <button data-page="shop" class="success">🛒 تجهیزات</button>
+    <button data-page="custom" class="warn">🎨 کارت‌ها</button>
+    <button id="logout" class="danger">🔐 خروج</button>
+   </nav>
+  </div>
+  <main id="main"></main>
+  <footer>━━━━━━━━━━━━━━━━━━━━<br>🆔 @woorld_warIII<br>👑 مدیریت جنگ جهانی سوم<br>━━━━━━━━━━━━━━━━━━━━</footer>
+ </div>`;
+
+ document.querySelectorAll("[data-page]").forEach(b=>{
+  b.onclick=()=>render(b.dataset.page);
+ });
+ $("logout").onclick=gate;
+ render(page);
+}
+
+function render(page){
+ const pages={panel,center,rules,tutorial,docs,shop,custom};
+ (pages[page]||panel)();
+ if(page!=="panel"){
+  const main=$("main");
+  main.insertAdjacentHTML("afterbegin",'<button class="secondary" id="backPanel">⬅️ بازگشت به پنل کشور</button>');
+  $("backPanel").onclick=()=>render("panel");
+ }
+}
+
+function panel(){
+ $("main").innerHTML=`
+ <div class="card center">
+  <div class="flag">${esc(current[0])}</div>
+  <h1>پنل کشور ${esc(current[1])}</h1>
+  <p>👑 ${esc(current[3])} | 🏛️ ${esc(current[4])}</p>
+  <span class="badge">فصل ۷</span>
+ </div>
+ <div class="grid">
+  <div class="item center">❤️ سلامت<br><b>۲۰۰</b></div>
+  <div class="item center">💰 دارایی<br><b>در کانال دارایی</b></div>
+  <div class="item center">📈 درآمد روزانه<br><b>در کانال دارایی</b></div>
+ </div>
+ <div class="card center">
+  <h2>⚙️ امکانات پنل کشور</h2>
+  <div class="grid">
+   <button data-page="shop" class="success">🛒 خرید تجهیزات</button>
+   <button data-page="rules" class="secondary">📜 قوانین بازی</button>
+   <button data-page="tutorial" class="secondary">🎓 آموزش بازی</button>
+   <button data-page="docs" class="secondary">📄 مرکز اسناد</button>
+   <button data-page="custom" class="warn">🎨 ساخت کارت</button>
+   <button data-page="center" class="secondary">🏛️ مرکز اطلاعات</button>
+  </div>
+ </div>`;
+ bindLocalNav();
+}
+
+function bindLocalNav(){
+ document.querySelectorAll("#main [data-page]").forEach(b=>{
+  b.onclick=()=>render(b.dataset.page);
+ });
+}
+
+function center(){
+ $("main").innerHTML=`
+ <div class="card center">
+  <h1>🏛️ مرکز جنگ جهانی سوم</h1>
+  <p>از این بخش می‌توانی به امکانات بازی دسترسی پیدا کنی.</p>
+  <button data-page="rules">📜 قوانین</button>
+  <button data-page="tutorial">🎓 آموزش</button>
+  <button data-page="docs">📄 مرکز اسناد</button>
+  <button data-page="shop">🛒 تجهیزات</button>
+ </div>
+ <div class="card center">
+  <h2>🏆 قهرمانان فصل‌های گذشته</h2>
+  <div class="grid">
+   <div class="item">فصل ۴: 🇺🇸 آمریکا</div>
+   <div class="item">فصل ۵: 🇮🇷 ایران</div>
+   <div class="item">فصل ۶: 🪖 سپاه</div>
+  </div>
+ </div>`;
+ bindLocalNav();
+}
+
+function rules(){
+ $("main").innerHTML=`
+ <div class="card">
+  <h1>📜 قوانین بازی</h1>
+  <div class="rule"><b>۱. ورود به بازی</b><br>هر بازیکن باید با کد اختصاصی کشور خود وارد پنل شود.</div>
+  <div class="rule"><b>۲. خرید تجهیزات</b><br>قیمت‌ها طبق فهرست فروشگاه محاسبه می‌شوند. تجهیزات درآمدزا حداکثر ۱۰ عدد قابل خرید هستند؛ برای سایر موارد محدودیت ۱۰ عددی تعیین نشده است.</div>
+  <div class="rule"><b>۳. ثبت سفارش</b><br>کارت نهایی سفارش را برای ادمین خرید تجهیزات ارسال کنید تا بررسی و ثبت شود.</div>
+  <div class="rule"><b>۴. دوئل</b><br>طبق قوانین بازی، فاصله مجاز دوئل برای هر کشور سه روز است. زمان دفاع ده دقیقه است.</div>
+  <div class="rule"><b>۵. جنگ اتحادی</b><br>هر اتحاد یک رهبر و حداکثر چهار عضو دارد. آغاز جنگ اتحادی باید با تأیید رهبران دو طرف انجام شود.</div>
+  <div class="rule"><b>۶. گزارش نبرد</b><br>شروع و نتیجه نبرد باید با کارت گزارش ثبت شود.</div>
+  <div class="rule"><b>۷. تجارت</b><br>تجارت باید با سند تجاری ثبت و توسط طرفین تأیید شود.</div>
+  <div class="rule"><b>۸. قرارداد</b><br>قرارداد وام، فروش تجهیزات و توافق‌ها باید با سند قرارداد ثبت شوند.</div>
+  <div class="rule"><b>۹. صلح</b><br>شرایط صلح باید در سند صلح نوشته و توسط طرفین پذیرفته شود.</div>
+  <div class="rule"><b>۱۰. بیانیه</b><br>بیانیه‌های رسمی باید با کارت بیانیه ثبت شوند.</div>
+  <div class="rule"><b>۱۱. امانت‌داری</b><br>ثبت جعلی تجهیزات، پول، درآمد و نتیجه جنگ ممنوع است.</div>
+  <div class="rule"><b>۱۲. مدیریت</b><br>ثبت نهایی خرید و درآمد بر عهده ادمین‌های مربوطه است.</div>
+ </div>`;
+}
+
+function tutorial(){
+ $("main").innerHTML=`
+ <div class="card">
+  <h1>🎓 آموزش بازی</h1>
+  <div class="rule"><b>گام ۱ | ورود</b><br>کد کشور را وارد کن و وارد پنل شو.</div>
+  <div class="rule"><b>گام ۲ | مشاهده امکانات</b><br>از پنل کشور وارد فروشگاه، قوانین، آموزش یا اسناد شو.</div>
+  <div class="rule"><b>گام ۳ | خرید</b><br>تجهیز موردنظر را انتخاب کن و تعداد آن را وارد کن.</div>
+  <div class="rule"><b>گام ۴ | بررسی هزینه</b><br>قیمت کل و درآمد روزانه در صورت درآمدزا بودن مورد نمایش داده می‌شود.</div>
+  <div class="rule"><b>گام ۵ | سفارش</b><br>سفارش را به کارت نهایی تبدیل و برای ادمین ارسال کن.</div>
+  <div class="rule"><b>گام ۶ | اسناد</b><br>برای ثبت نبرد، تجارت، قرارداد، صلح و بیانیه از مرکز اسناد استفاده کن.</div>
+  <div class="rule"><b>گام ۷ | خروج</b><br>با دکمه خروج به صفحه اصلی برگرد.</div>
+ </div>`;
+}
+
+function docs(){
+ $("main").innerHTML=`
+ <div class="card">
+  <h1>📄 مرکز اسناد</h1>
+  <p class="small">نوع سند را انتخاب کن، اطلاعات را بنویس و کارت را بساز.</p>
+  <button data-doc="battle">⚔️ گزارش نبرد</button>
+  <button data-doc="trade">📋 سند تجاری</button>
+  <button data-doc="contract">📜 قرارداد</button>
+  <button data-doc="peace">🕊️ صلح</button>
+  <button data-doc="statement">⚠️ بیانیه</button>
+ </div>
+ <div id="docArea"></div>`;
+ bindDocButtons();
+}
+
+function custom(){
+ $("main").innerHTML=`
+ <div class="card center">
+  <h1>🎨 ساخت کارت‌های بازی</h1>
+  <p>کارت موردنظر را انتخاب کن.</p>
+  <button data-doc="battle">⚔️ نبرد</button>
+  <button data-doc="trade">📋 تجارت</button>
+  <button data-doc="contract">📜 قرارداد</button>
+  <button data-doc="peace">🕊️ صلح</button>
+  <button data-doc="statement">⚠️ بیانیه</button>
+ </div>
+ <div id="docArea"></div>`;
+ bindDocButtons();
+}
+
+function bindDocButtons(){
+ document.querySelectorAll("[data-doc]").forEach(b=>{
+  b.onclick=()=>docForm(b.dataset.doc);
+ });
+}
+
+function targetPicker(){
+ return `<label>کشور مقصد</label>
+ <input id="targetSearch" placeholder="جستجوی کشور مقصد">
+ <div id="targets" class="grid"></div>`;
+}
+
+function docForm(type){
+ target=null;
+ const titles={
+  battle:"⚔️ گزارش نبرد",
+  trade:"📋 سند تجاری",
+  contract:"📜 قرارداد",
+  peace:"🕊️ سند صلح",
+  statement:"⚠️ بیانیه رسمی"
+ };
+ let extra="";
+ if(type==="statement"){
+  extra=`<label>متن بیانیه</label><textarea id="statementText" placeholder="متن بیانیه را وارد کن"></textarea>`;
+ }else{
+  extra=targetPicker()+formFields(type);
+ }
+ $("docArea").innerHTML=`
+ <div class="card">
+  <h2>${titles[type]}</h2>
+  ${extra}
+  <button class="success" id="makeDoc">📝 ساخت کارت</button>
+ </div>
+ <div id="docResult"></div>`;
+ if(type!=="statement")bindTargets();
+ $("makeDoc").onclick=()=>makeDoc(type);
+}
+
+function formFields(type){
+ if(type==="battle")return `
+  <label>نام عملیات</label><input id="operation" placeholder="نام عملیات">
+  <label>تجهیزات استفاده‌شده</label><textarea id="eq" placeholder="تجهیزات استفاده‌شده"></textarea>
+  <label>خسارات</label><textarea id="damage" placeholder="خسارات"></textarea>
+  <label>غنائم</label><input id="loot" placeholder="غنائم">
+ `;
+ if(type==="trade")return `
+  <label>تجهیزات یا مورد تجاری</label><input id="eq">
+  <label>تعداد</label><input id="qty" type="number" min="1">
+  <label>قیمت مجموع</label><input id="price">
+ `;
+ if(type==="contract")return `
+  <label>مورد تحویل</label><textarea id="delivery"></textarea>
+  <label>در مقابل دریافت</label><textarea id="receive"></textarea>
+  <label>شروط قرارداد</label><textarea id="terms"></textarea>
+  <label>مدت قرارداد</label><input id="duration">
+ `;
+ return `
+  <label>تاریخ صدور</label><input id="issue" placeholder="تاریخ">
+  <label>تاریخ انقضا</label><input id="expire" placeholder="تاریخ">
+  <label>محل امضا</label><input id="place" placeholder="محل امضا">
+ `;
+}
+
+function bindTargets(){
+ const draw=()=>{
+  const q=$("targetSearch").value.trim();
+  $("targets").innerHTML=COUNTRIES.filter(c=>c!==current&&(!q||c[1].includes(q)))
+   .map(c=>`<button class="item" data-ti="${COUNTRIES.indexOf(c)}">${esc(c[0])} ${esc(c[1])}</button>`).join("");
+ };
+ $("targetSearch").oninput=draw;
+ draw();
+ $("targets").onclick=e=>{
+  const b=e.target.closest("[data-ti]");
+  if(!b)return;
+  target=COUNTRIES[Number(b.dataset.ti)];
+  document.querySelectorAll("#targets button").forEach(x=>x.classList.remove("success"));
+  b.classList.add("success");
+ };
+}
+
+function makeDoc(type){
+ if(type!=="statement"&&!target){
+  alert("ابتدا کشور مقصد را انتخاب کن.");
+  return;
+ }
+ let text="";
+ const issuer=`صادرکننده: ${current[3]}\nکشور: ${countryLabel(current)}\nپایتخت: ${current[4]}`;
+ const footer="\n━━━━━━━━━━━━━━━━━━━━━━\n🆔 @woorld_warIII";
+
+ if(type==="statement"){
+  const statement=$("statementText").value.trim();
+  if(!statement){alert("متن بیانیه را وارد کن.");return}
+  text=`━━━━━━━━━━━━━━━━━━━━━━
+⚠️ بیانیه رسمی جنگ جهانی سوم
+━━━━━━━━━━━━━━━━━━━━━━
+${issuer}
+
+🔹 متن بیانیه:
+${statement}
+🔹 وضعیت: عملیاتی${footer}`;
+ }else if(type==="battle"){
+  text=`⚔️ گزارش نبرد
+━━━━━━━━━━━━━━━━━━━━━━
+🎯 نام عملیات: ${$("operation").value.trim()}
+🚩 مهاجم: ${countryLabel(current)}
 🛡 مدافع: ${countryLabel(target)}
 
-🛰️ 𝐄𝐐𝐔𝐈𝐏𝐌𝐄𝐍𝐓 |
-تجهیزات استفاده‌شده:
+🛰 تجهیزات استفاده‌شده:
 ${$("eq").value.trim()}
 
-🔻 خسارات وارده:
+🔻 خسارات:
 ${$("damage").value.trim()}
 
-💰 غنائم جنگی:
-${$("loot").value.trim()};   }else if(type==="trade"){   text=╔════════════════════════
-📋 سـنـد تـجـاری
-╚════════════════════════
-
-🔹 کـشور فـروشـنـده:
-${countryLabel(current)}
-
-🔹 کـشور گـیـرنـده:
-${countryLabel(target)}
-
-📦 تـجـهـیـزات:
-${$("eq").value.trim()}
-
-🔢 تـعـداد:
-${$("qty").value.trim()}
-
-💰 قـیمت مـجـمـوع:
-${$("price").value.trim()||"✨ دوستانه، رایگان ✨"}
-
-🔗 @woorld_warIII
-━━━━━━━━━━━━━━━
-✅ وضعیت: در انتظار تایید 🏁
-❌ تجارت باعث بالا رفتن رضایت مردمی می شود ❌;   }else if(type==="contract"){   text=╔════════════════════════
-📜 سـند قرارداد (وام، فروش تجهیزات)
-╚════════════════════════
-
-🔹 کـشور مبدا:
-${countryLabel(current)}
-
-🔹 کـشور مقصد:
-${countryLabel(target)}
-
-📤 مـورد تـحویل:
+💰 غنائم:
+${$("loot").value.trim()}${footer}`;
+ }else if(type==="trade"){
+  text=`📋 سند تجاری
+━━━━━━━━━━━━━━━━━━━━━━
+🔹 فروشنده: ${countryLabel(current)}
+🔹 گیرنده: ${countryLabel(target)}
+📦 تجهیزات: ${$("eq").value.trim()}
+🔢 تعداد: ${$("qty").value.trim()}
+💰 قیمت مجموع: ${$("price").value.trim()||"توافقی"}
+🔖 وضعیت: در انتظار تأیید طرفین${footer}`;
+ }else if(type==="contract"){
+  text=`📜 سند قرارداد
+━━━━━━━━━━━━━━━━━━━━━━
+🔹 کشور اول: ${countryLabel(current)}
+🔹 کشور دوم: ${countryLabel(target)}
+📤 مورد تحویل:
 ${$("delivery").value.trim()}
-
-📥 در مـقـابـل دریـافـت:
+📥 در مقابل دریافت:
 ${$("receive").value.trim()}
-
-⚖️ شـروط قرارداد:
+⚖️ شروط:
 ${$("terms").value.trim()}
+🔐 مدت قرارداد: ${$("duration").value.trim()}
+✍️ امضای کشور اول: ${countryLabel(current)}
+✍️ امضای کشور دوم: ${countryLabel(target)}
+🔖 وضعیت: در انتظار تأیید طرفین${footer}`;
+ }else{
+  text=`🕊️ سند قرارداد صلح
+━━━━━━━━━━━━━━━━━━━━━━
+🌍 کشور اول: ${countryLabel(current)}
+🌍 کشور دوم: ${countryLabel(target)}
 
-🔐 مـدت قرارداد:
-${$("duration").value.trim()}
+📜 مفاد صلح:
+🔸 توقف درگیری میان دو کشور
+🔸 حل اختلافات از طریق مذاکره
+🔸 احترام به توافق‌های ثبت‌شده
 
-✍️ امضای کشور اول:
-${countryLabel(current)}
-
-✍️ امضای کشور دوم:
-${countryLabel(target)}
-
-🔗 @woorld_warIII
-━━━━━━━━━━━━━━━
-✅ وضعیت: در انتظار تایید 🏁
-❌ قرارداد پس از تایید طرفین معتبر است ❌;   }else{   text=╔════════════════════════
-🕊️ سـند قرارداد صـلح 🕊️
-╚════════════════════════
-
-🌍 سناریوی بازی جنگ جهانی سوم
-
-🔹 کشور اول:
-${countryLabel(current)}
-
-🔹 کشور دوم:
-${countryLabel(target)}
-
-━━━━━━━━━━━━━━━━━━━━
-
-📜 مفاد قرارداد صلح:
-
-🔸 پایان رسمی درگیری‌ها و اقدامات نظامی میان دو کشور
-🔸 توقف حملات و عملیات نظامی علیه یکدیگر
-🔸 احترام متقابل به قلمرو و منافع دو کشور
-🔸 لغو اقدامات خصمانه و تحریم‌های مربوط به این درگیری
-🔸 تعهد دو کشور به حل اختلافات آینده از طریق مذاکره
-
-━━━━━━━━━━━━━━━━━━━━
-
-📅تاریخ صدور: ${$("issue").value.trim()}
+📅 تاریخ صدور: ${$("issue").value.trim()}
 📅 تاریخ انقضا: ${$("expire").value.trim()}
-📍 محل امضا صلح: ${$("place").value.trim()}
+📍 محل امضا: ${$("place").value.trim()}
 
-━━━━━━━━━━━━━━━━━━━━
+✍️ امضای کشور اول: ${countryLabel(current)}
+✍️ امضای کشور دوم: ${countryLabel(target)}
+🕊️ وضعیت: در انتظار تأیید طرفین${footer}`;
+ }
 
-✍️ امضای کشور اول:
-${countryLabel(current)}
+ $("docResult").innerHTML=`
+ <div class="card">
+  <h3>📄 کارت نهایی</h3>
+  <pre id="docText"></pre>
+  <button class="success" id="copyDoc">📋 کپی کارت</button>
+ </div>`;
+ $("docText").textContent=text;
+ $("copyDoc").onclick=()=>copyText(text);
+}
 
-✍️ امضای کشور دوم:
-${countryLabel(target)}
+function copyText(text){
+ if(navigator.clipboard&&window.isSecureContext){
+  navigator.clipboard.writeText(text)
+   .then(()=>alert("✅ کارت کپی شد."))
+   .catch(()=>fallbackCopy(text));
+ }else fallbackCopy(text);
+}
 
-━━━━━━━━━━━━━━━━━━━━
+function fallbackCopy(text){
+ const ta=document.createElement("textarea");
+ ta.value=text;
+ document.body.appendChild(ta);
+ ta.select();
+ try{
+  document.execCommand("copy");
+  alert("✅ کارت کپی شد.");
+ }catch(e){
+  alert("کپی خودکار ممکن نشد؛ متن کارت را دستی انتخاب و کپی کن.");
+ }
+ ta.remove();
+}
 
-🕊️ وضعیت قرارداد: ✅ صلح برقرار است
+function shop(){
+ $("main").innerHTML=`
+ <div class="card">
+  <h1>🛒 خرید و سفارش تجهیزات</h1>
+  <div class="msg">
+   ⚠️ فقط تجهیزات درآمدزا حداکثر ۱۰ عدد قابل خرید هستند.<br>
+   برای سایر تجهیزات محدودیت ۱۰ عددی وجود ندارد.<br>
+   کارت نهایی را برای ادمین خرید تجهیزات ارسال کن.
+  </div>
+  <label>جستجوی تجهیزات</label>
+  <input id="itemSearch" placeholder="نام تجهیز یا دسته...">
+  <div id="itemList" class="grid"></div>
+  <div id="buyBox" class="hidden"></div>
+ </div>`;
+ drawItems();
+}
 
-🆔 @woorld_warIII;   }   $("docResult").innerHTML=<div class="card"><h3>📄 کارت نهایی</h3><pre id="docText">${esc(text)}</pre><button class="success" id="copyDoc">📋 کپی کارت</button></div>;   $("copyDoc").onclick=()=>copyText(text);   }   function copyText(text){navigator.clipboard?.writeText(text).then(()=>alert("✅ کارت کپی شد.")).catch(()=>{const ta=document.createElement("textarea");ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand("copy");ta.remove();alert("✅ کارت کپی شد.")})}   function shop(){   $("main").innerHTML=<div class="card"><h1>🛒 خرید و سفارش تجهیزات</h1>
+function drawItems(){
+ const q=$("itemSearch").value.trim();
+ const filtered=ITEMS.filter(x=>!q||x.name.includes(q)||x.category.includes(q));
+ const groups=[...new Set(filtered.map(x=>x.category))];
 
-<div class="msg">⚠️ <b>فقط تجهیزات درآمدزا حداکثر ۱۰ عدد قابل خرید هستند.</b><br>برای تجهیزات غیر درآمدزا هیچ محدودیت ۱۰ عددی وجود ندارد.<br>بعد از تکمیل سفارش، کارت نهایی را برای ادمین‌های خرید تجهیزات که در کانال اصلی پین شده‌اند ارسال کنید تا ثبت شود.</div>  
-<label>جستجوی تجهیزات</label><input id="itemSearch" placeholder="نام تجهیز..."><div id="itemList" class="grid"></div>  
-<div id="buyBox" class="hidden"></div></div>`;  
-drawItems();  
-}  
-let selectedItem=null;  
-function drawItems(){  
-const q=($("itemSearch").value||"").trim();  
-const filtered=ITEMS.filter(x=>!q||x.name.includes(q)||x.category.includes(q));  
-const groups=[...new Set(filtered.map(x=>x.category))];  
-$("itemList").innerHTML=groups.map(group=>`<div style="grid-column:1/-1"><h3>${esc(group)}</h3><div class="grid">${filtered.filter(x=>x.category===group).map(x=>`<button class="item" data-item="${ITEMS.indexOf(x)}">${esc(x.name)}<br><span class="small">قیمت: ${money(x.price)} | درآمد روزانه: ${money(x.income)}</span></button>`).join("")}</div></div>`).join("");  
-$("itemSearch").oninput=drawItems;  
-$("itemList").onclick=e=>{const b=e.target.closest("[data-item]");if(!b)return;selectedItem=ITEMS[Number(b.dataset.item)];showBuyBox()};  
-}  
-function showBuyBox(){  
-$("buyBox").classList.remove("hidden");  
-$("buyBox").innerHTML=`<h2>📦 ${esc(selectedItem.name)}</h2><p>💰 قیمت واحد: ${money(selectedItem.price)}<br>📈 درآمد روزانه هر واحد: ${money(selectedItem.income)}</p>  
-<label>تعداد</label><input id="buyQty" type="number" min="1" value="1">  
-<div id="calc" class="msg"></div><button class="success" id="addOrder">➕ افزودن به سفارش</button>`;  
-$("buyQty").oninput=calcBuy;calcBuy();$("addOrder").onclick=addOrder;  
-}  
-function calcBuy(){  
-const q=Math.max(0,Number($("buyQty").value||0));  
-$("calc").innerHTML=selectedItem.revenue&&q>10?`<span>❌ حداکثر خرید این مورد درآمدزا ۱۰ عدد است.</span>`:`💰 قیمت کل: <b>${money(q*selectedItem.price)}</b><br>💳 درآمد کل روزانه: <b>${money(q*selectedItem.income)}</b>`;  
-}  
-let order=[];  
-function addOrder(){  
-const q=Number($("buyQty").value||0);  
-if(q<1)return alert("تعداد را وارد کنید.");  
-if(selectedItem.revenue&&q>10)return alert("❌ تجهیزات درآمدزا حداکثر ۱۰ عدد قابل خرید هستند.");  
-order.push({name:selectedItem.name,qty:q,price:selectedItem.price,income:selectedItem.income});  
-renderOrder();  
-}  
-function renderOrder(){  
-const total=order.reduce((a,x)=>a+x.qty*x.price,0),income=order.reduce((a,x)=>a+x.qty*x.income,0);  
-$("buyBox").insertAdjacentHTML("beforeend",`<div class="card"><h3>🧾 سفارش فعلی</h3><p>💰 قیمت کل: <b>${money(total)}</b><br>💳 درآمد کل روزانه: <b>${money(income)}</b></p><div class="list">${order.map(x=>`📦 ${x.qty} × ${esc(x.name)}`).join("<br>")}</div><button class="success" id="finalOrder">📋 ساخت کارت نهایی</button></div>`);  
-$("finalOrder").onclick=()=>finalOrder(total,income);  
-}  
-function finalOrder(total,income){  
-const lines=order.map(x=>`${x.qty} × ${x.name}`).join("\n");  
-const text=`━━━━━━━━━━━━━━━━━━━━━━  
-🛒 𝐄𝐐𝐔𝐈𝐏𝐌𝐄𝐍𝐓 𝐎𝐑𝐃𝐄𝐑  
-سفارش تجهیزات  
-━━━━━━━━━━━━━━━━━━━━━━  🌍 کشور: ${countryLabel(current)}
+ $("itemList").innerHTML=groups.map(group=>`
+  <div style="grid-column:1/-1">
+   <h3>${esc(group)}</h3>
+   <div class="grid">
+    ${filtered.filter(x=>x.category===group).map(x=>`
+     <button class="item" data-item="${ITEMS.indexOf(x)}">
+      ${esc(x.name)}<br>
+      <span class="small">قیمت: ${money(x.price)}<br>
+      درآمد روزانه: ${money(x.income)}</span>
+     </button>`).join("")}
+   </div>
+  </div>`).join("");
+
+ $("itemSearch").oninput=drawItems;
+ $("itemList").onclick=e=>{
+  const b=e.target.closest("[data-item]");
+  if(!b)return;
+  selectedItem=ITEMS[Number(b.dataset.item)];
+  showBuyBox();
+ };
+}
+
+function showBuyBox(){
+ $("buyBox").classList.remove("hidden");
+ $("buyBox").innerHTML=`
+  <div class="item">
+   <h2>📦 ${esc(selectedItem.name)}</h2>
+   <p>💰 قیمت واحد: ${money(selectedItem.price)}</p>
+   <p>📈 درآمد روزانه هر واحد: ${money(selectedItem.income)}</p>
+   <label>تعداد</label>
+   <input id="buyQty" type="number" min="1" value="1">
+   <div id="calc" class="msg"></div>
+   <button class="success" id="addOrder">➕ افزودن به سفارش</button>
+  </div>
+  <div id="orderArea"></div>`;
+ $("buyQty").oninput=calcBuy;
+ calcBuy();
+ $("addOrder").onclick=addOrder;
+ renderOrder();
+}
+
+function calcBuy(){
+ const q=Math.max(0,Number($("buyQty").value||0));
+ if(selectedItem.revenue&&q>10){
+  $("calc").innerHTML="❌ حداکثر خرید این مورد درآمدزا ۱۰ عدد است.";
+  return;
+ }
+ $("calc").innerHTML=`💰 قیمت کل: <b>${money(q*selectedItem.price)}</b><br>
+ 💳 درآمد کل روزانه: <b>${money(q*selectedItem.income)}</b>`;
+}
+
+function addOrder(){
+ const q=Number($("buyQty").value||0);
+ if(!Number.isInteger(q)||q<1){
+  alert("تعداد معتبر وارد کن.");
+  return;
+ }
+ if(selectedItem.revenue&&q>10){
+  alert("❌ حداکثر خرید این مورد درآمدزا ۱۰ عدد است.");
+  return;
+ }
+
+ const existing=order.find(x=>x.name===selectedItem.name);
+ if(existing){
+  if(selectedItem.revenue&&existing.qty+q>10){
+   alert("مجموع خرید این مورد درآمدزا نمی‌تواند بیشتر از ۱۰ عدد باشد.");
+   return;
+  }
+  existing.qty+=q;
+ }else{
+  order.push({
+   name:selectedItem.name,qty:q,price:selectedItem.price,
+   income:selectedItem.income,revenue:selectedItem.revenue
+  });
+ }
+ renderOrder();
+ alert("✅ به سفارش اضافه شد.");
+}
+
+function removeOrder(index){
+ order.splice(index,1);
+ renderOrder();
+}
+
+function renderOrder(){
+ const area=$("orderArea");
+ if(!area)return;
+ const total=order.reduce((a,x)=>a+x.qty*x.price,0);
+ const income=order.reduce((a,x)=>a+x.qty*x.income,0);
+
+ area.innerHTML=`
+  <div class="card">
+   <h3>🧾 سفارش فعلی</h3>
+   ${order.length?order.map((x,i)=>`
+    <div class="order-line">
+     <span>${x.qty} × ${esc(x.name)}</span>
+     <span>${money(x.qty*x.price)} تومان</span>
+     <button class="danger" data-remove="${i}">حذف</button>
+    </div>`).join(""):'<p class="small">هنوز تجهیزی به سفارش اضافه نشده است.</p>'}
+   <hr style="border-color:#294c66">
+   <p>💰 قیمت کل: <b>${money(total)}</b></p>
+   <p>📈 درآمد روزانه کل: <b>${money(income)}</b></p>
+   <button class="success" id="finalOrder" ${order.length?'':'disabled'}>📋 ساخت کارت نهایی</button>
+   <button class="danger" id="clearOrder" ${order.length?'':'disabled'}>🗑️ پاک کردن سفارش</button>
+   <div id="finalOrderArea"></div>
+  </div>`;
+
+ area.querySelectorAll("[data-remove]").forEach(b=>{
+  b.onclick=()=>removeOrder(Number(b.dataset.remove));
+ });
+ $("clearOrder").onclick=()=>{
+  order=[];
+  renderOrder();
+ };
+ $("finalOrder").onclick=()=>finalOrder(total,income);
+}
+
+function finalOrder(total,income){
+ const lines=order.map(x=>`📦 ${money(x.qty)} × ${x.name} — ${money(x.qty*x.price)}`).join("\n");
+ const text=`━━━━━━━━━━━━━━━━━━━━━━
+🛒 سفارش تجهیزات | فصل ۷
+━━━━━━━━━━━━━━━━━━━━━━
+🌍 کشور: ${countryLabel(current)}
+👑 رهبر کشور: ${current[3]}
+🏛️ پایتخت: ${current[4]}
 
 💰 قیمت کل: ${money(total)}
-💳 درآمد کل روزانه: ${money(income)}
+📈 درآمد روزانه کل: ${money(income)}
 
-📦 تجهیزات:
-${lines};   $("buyBox").insertAdjacentHTML("beforeend",<div class="card"><h3>📄 کارت نهایی سفارش</h3><pre id="orderText">${esc(text)}</pre><button class="success" id="copyOrder">📋 کپی کارت</button></div>);   $("copyOrder").onclick=()=>copyText(text);   }   function custom(){   $("main").innerHTML=<div class="card center"><h1>🎨 شخصی‌سازی کارت‌ها</h1><p>نوع سند را انتخاب کنید تا کارت مخصوص خود را بسازید.</p>
-<button data-doc="battle">⚔️ نبرد</button><button data-doc="trade">📋 تجارت</button><button data-doc="contract">📜 قرارداد</button><button data-doc="peace">🕊️ صلح</button><button data-doc="statement">⚠️ بیانیه</button></div><div id="docArea"></div>`;
-document.querySelectorAll("[data-doc]").forEach(b=>b.onclick=()=>docForm(b.dataset.doc));
+📦 فهرست تجهیزات:
+${lines}
+
+━━━━━━━━━━━━━━━━━━━━━━
+🔖 وضعیت: در انتظار تأیید ادمین
+🆔 @woorld_warIII`;
+
+ $("finalOrderArea").innerHTML=`
+  <div class="card">
+   <h3>📄 کارت نهایی سفارش</h3>
+   <pre id="orderText"></pre>
+   <button class="success" id="copyOrder">📋 کپی کارت</button>
+  </div>`;
+ $("orderText").textContent=text;
+ $("copyOrder").onclick=()=>copyText(text);
 }
+
 gate();
 </script>
-
-</body>  
-</html>   
+</body>
+  </html>
